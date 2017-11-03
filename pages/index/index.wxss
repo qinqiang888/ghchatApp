@@ -1,0 +1,257 @@
+/**index.wxss**/
+
+page {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  background: #f0f2f5;
+  color: #525a66;
+  font-family: Microsoft YaHei;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.allhosp {
+  background: #fff;
+  padding: 0 0 0 15px;
+}
+
+.allhosp-li {
+  position: relative;
+  padding-right: 15px;
+  border-bottom: 1px solid #e6e6e6;
+  height: 83px;
+  padding: 15px 15px 15px 0;
+}
+
+.allhosp-li:last-child {
+  /* border: 0; */
+}
+
+.left-img {
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 83px;
+  height: 83px;
+}
+
+.left-img image {
+  width: 83px;
+  height: 83px;
+  border-radius: 3px;
+}
+.downgrey{ background:#DFE3E8}
+
+
+.right-cont {
+  margin-left: 94px;
+}
+
+.right-cont .h1 {
+  display: block;
+  height: 20px;
+  line-height: 20px;
+}
+
+.right-cont .h1 .f1 {
+  color: #222;
+  font-size: 16px;
+}
+
+.right-cont .h1 .fr {
+  color: #999;
+  font-size: 13px;
+  float: right;
+}
+
+.right-cont .h2 {
+  color: #999;
+  font-size: 13px;
+  height: 28px;
+  line-height: 28px;
+}
+
+.right-cont .h3 {
+  color: #999;
+  font-size: 13px;
+  height: 36px;
+  line-height: 18px;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  display: -webkit-box;
+}
+
+.sytop { height: 135px;width:100%;}
+
+.sytop {display:block; position:relative; top:0; width:100%;background: #1cc6a3;z-index:4;}
+
+.sytop image {
+  width: 100%;
+  height: 40px;
+  padding-top: 80px;
+}
+
+.yytop {
+  border-bottom: 1px solid #e6e6e6;
+  overflow: hidden;
+}
+
+.yytop .two {
+  float: left;
+  width: 50%;
+  background: #fff;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  font-size: 14px;
+  color: #222;
+}
+
+.yytop .two text {
+  background: url("http://m.yihu365.com/images/xiaocxu/rmzt.png")no-repeat right;
+  background-size: 8px 5px;
+  padding-right: 13px;
+}
+
+.yytop .two .cur {
+  background: url("http://m.yihu365.com/images/xiaocxu/xlzt.png")no-repeat right;
+  background-size: 8px 5px;
+  color: #1cc6a3;
+}
+
+.yytop .shuxian {
+  background: #fff url("http://m.yihu365.com/images/xiaocxu/shuxian.jpg")no-repeat right;
+  background-size: 1px 15px;
+}
+
+.foot {
+  width: 100%;
+  height: 51px;
+}
+
+.footer {
+  width: 100%;
+  height: 50px;
+  border-top: 1px solid #e0e1e1;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.footer .lifoot {
+  width: 50%;
+  height: 50px;
+  float: left;
+  text-align: center;
+}
+
+.footer .lifoot .p {
+  height: 20px;
+  padding-top: 30px;
+  font-size: 12px;
+  color: #646464;
+}
+
+.yuyue {
+  background: url("http://m.yihu365.com/images/xiaocxu/sywxz.png")no-repeat;
+  background-size: 22px 17px;
+  background-position: center 10px;
+  height: 20px;
+  padding-top: 30px;
+  font-size: 12px;
+}
+
+.wode {
+  background: url("http://m.yihu365.com/images/xiaocxu/wode.png")no-repeat;
+  background-size: 17px 20px;
+  background-position: center 10px;
+}
+
+.footer .lifoot .yuyue {
+  background: url("http://m.yihu365.com/images/xiaocxu/syxz.png")no-repeat;
+  background-size: 22px 17px;
+  background-position: center 10px;
+  color: #1cc6a3;
+  height: 20px;
+  padding-top: 30px;
+  font-size: 12px;
+}
+
+.footer .lifoot.cur .wode {
+  background: url("http://m.yihu365.com/images/xiaocxu/wodexz.png")no-repeat;
+  background-size: 17px 20px;
+  background-position: center 10px;
+  color: #1cc6a3;
+}
+
+.lute {
+  position: absolute;
+  z-index: 2;
+  background: #fff;
+  width: 100%;
+  height: 200px;
+  overflow: auto;
+}
+
+.tive{position: fixed;z-index:4; width:100%;}
+
+.xlbox .dq {
+  height: 45px;
+  line-height: 45px;
+  margin-left: 15px;
+  border-bottom: 1px solid #e6e6e6;
+  display: block;
+  padding-right: 15px;
+  position: relative;
+}
+
+.xlbox .dq:last-child view {
+  border-bottom: 0;
+}
+
+.xlbox .dq .cur {
+  color: #1cc6a3;
+}
+
+.xzg {
+  background: url(http://m.yihu365.com/images/xiaocxu/xzg.png)no-repeat right;
+  background-size: 15px;
+  display: block;
+  height: 45px;
+  width: 15px;
+  position: absolute;
+  right: 15px;
+  top: 0;
+}
+
+.grayzhezhao {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  left: 0;
+  top: 0;
+}

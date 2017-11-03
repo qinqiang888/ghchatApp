@@ -1,0 +1,44 @@
+<view class="container">
+  <view class="bgw">
+    <block wx:if="{{edit==false}}">
+      <view class="mf_fix">
+        <view id="inner" wx:for="{{AddPatientList}}" class="fline_block" bindtap="order" data-id="{{item.ID}}" data-card="{{item.IDCARD_NO}}" data-sex="{{item.SEX}}" data-ship="{{item.RELATIONSHIP}}" data-name="{{item.REAL_NAME}}" data-age="{{item.AGE}}">
+          <view>{{item.REAL_NAME}}</view>
+          <view wx:if="{{item.SEX==0}}" data-id="{{item.ID}}" data-card="{{item.IDCARD_NO}}" data-sex="{{item.SEX}}" data-ship="{{item.RELATIONSHIP}}" data-name="{{item.REAL_NAME}}" data-age="{{item.AGE}}">男</view>
+          <view wx:else data-id="{{item.ID}}" data-card="{{item.IDCARD_NO}}" data-sex="{{item.SEX}}" data-ship="{{item.RELATIONSHIP}}" data-name="{{item.REAL_NAME}}" data-age="{{item.AGE}}">女</view>
+          <view>{{item.AGE}}</view>
+          <view>{{item.RELATIONSHIP}}</view>
+          <view wx:if="{{item.ID==patientId}}" class="addrcur" data-id="{{item.ID}}" data-card="{{item.IDCARD_NO}}" data-sex="{{item.SEX}}" data-ship="{{item.RELATIONSHIP}}" data-name="{{item.REAL_NAME}}" data-age="{{item.AGE}}"></view>
+          <view wx:else class="addrno" data-id="{{item.ID}}" data-card="{{item.IDCARD_NO}}" data-sex="{{item.SEX}}" data-ship="{{item.RELATIONSHIP}}" data-name="{{item.REAL_NAME}}" data-age="{{item.AGE}}"></view>
+        </view>
+      </view>
+      <view class="foobtnone">
+        <view class="addr_manage_lbox">
+          <view class="onebtn_white" bindtap="addPatient">+添加新档案</view>
+        </view>
+        <view class="addr_manage_rbox" bindtap="edit">
+          <view class="onebtn_white">编辑</view>
+        </view>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="mf_fix">
+        <view id="inner" wx:for="{{AddPatientList}}" class="fline_block" data-id="{{item.ID}}" data-card="{{item.IDCARD_NO}}" data-sex="{{item.SEX}}" data-ship="{{item.RELATIONSHIP}}" data-name="{{item.REAL_NAME}}" data-name="{{item.AGE}}">
+          <view>{{item.RELATIONSHIP}}</view>
+          <view>{{item.REAL_NAME}}</view>
+          <view wx:if="{{item.SEX==0}}">男</view>
+          <view wx:else>女</view>
+          <view>{{item.AGE}}</view>
+          <view class="addrdel" bindtap="delPatient" data-id="{{item.ID}}"></view>
+        </view>
+      </view>
+      <view class="foobtnone">
+        <view class="onebtn_white" bindtap="over">完成</view>
+      </view>
+    </block>
+  </view>
+</view>
+
+<modal class="modal" hidden="{{dialogBlen}}" no-cancel bindconfirm="modalChange" bindcancel="modalChange">
+  <view>{{dialogMsg}}</view>
+</modal>

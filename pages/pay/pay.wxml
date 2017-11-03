@@ -1,0 +1,38 @@
+<view class="body_cur">
+  <view class="xcx_sf">
+    <view class="yfje">
+      应付金额
+    </view>
+    <view class="sfje">
+      <text class="xcx_em">¥{{orderFee}}</text>
+    </view>
+  </view>
+  <view class="bak">
+    <view class="zfd">
+      <view>
+        <view class="li">
+          <view class="xcx_je i"></view><text class="sp_lt">账户余额</text><text class="sp_rt">¥{{ableFee}}</text>
+        </view>
+        <navigator url="/pages/coupon/coupon?orderId={{orderId}}" class="li">
+          <view class="xcx_yh i "></view><text class="sp_lt">代金券</text><text wx:if="{{rechargeFee==0}}" class="sp_rt padcur">{{ischangeVoucher}}</text><text wx:else class="sp_rt padcur">¥{{rechargeFee}}</text>
+          <view class="index_blockMore">
+            <image src="http://m.yihu365.com/images/dizhi03.png"></image>
+          </view>
+        </navigator>
+      </view>
+    </view>
+    <view class="xcx_sf">
+      <text class="sfje">
+            实付：<text class="xcx_em">¥{{payFee}}</text>
+      </text>
+    </view>
+  </view>
+  <view class="wxbtn">
+    <button disabled="{{disabled}}" hover-class="none" loading="{{loading}}" bindtap="payOrder">{{title}}</button>
+
+  </view>
+
+</view>
+<modal class="modal" hidden="{{dialogBlen}}" no-cancel bindconfirm="modalChange" bindcancel="modalChange">
+  <view>{{dialogMsg}}</view>
+</modal>

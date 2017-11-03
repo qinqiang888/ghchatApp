@@ -1,0 +1,334 @@
+<view class="layout">
+  <view class="time-queren" wx:if="{{dataList.ghDate}}">您的最终就诊时间为<text>{{dataList.ghDate}}</text></view>
+
+  <view class="time-queren" wx:if="{{(dataList.orderStatus=='0' || (dataList.orderStatus=='4' && dataList.payStatus=='-1')) && payTimeOut}}">确认剩余时间<text>{{payTime}}</text></view>
+  <!--待抢约-->
+  <view class="orderClose-nav" wx:if="{{dataList.orderStatus=='0'}}">
+    <view class="orderClose-cont">
+      <view class="i">
+        <image src="http://m.yihu365.com/images/xiaocxu/order_iconzt2.png"></image>
+      </view>
+      <view class="rightp">
+        <text class="b">正在等待确认…</text>
+      </view>
+    </view>
+  </view>
+
+  <!--待付款-->
+  <view class="orderClose-nav" wx:if="{{dataList.orderStatus=='4' && dataList.payStatus=='-1'}}">
+    <view class="orderClose-cont">
+      <view class="i">
+        <image src="http://m.yihu365.com/images/xiaocxu/success.png"></image>
+      </view>
+      <view class="rightp">
+        <text class="b">恭喜您申请成功！</text>
+        <text class="span">请在40分钟内完成付款过期将自动取消</text>
+      </view>
+    </view>
+  </view>
+
+  <!--待服务-->
+  <view class="fuwulc" wx:if="{{dataList.orderStatus=='1'}}">
+    <image src="http://m.yihu365.com/images/xiaocxu/fuwulc.jpg"></image>
+  </view>
+
+  <!--已取消-->
+  <view class="orderClose-nav" wx:if="{{(dataList.orderStatus=='3' && dataList.payStatus=='-1') || dataList.orderStatus=='7'}}">
+    <view class="orderClose-cont">
+      <view class="i">
+        <image src="http://m.yihu365.com/images/xiaocxu/order_iconzt.png"></image>
+      </view>
+      <view class="rightp">
+        <text class="b">您已取消预约</text>
+      </view>
+    </view>
+  </view>
+
+  <!--已过期 && 未支付-->
+  <view class="orderClose-nav" wx:if="{{dataList.orderStatus=='-1' && dataList.serverUserId}}">
+    <view class="orderClose-cont">
+      <view class="i">
+        <image src="http://m.yihu365.com/images/xiaocxu/order_iconzt.png"></image>
+      </view>
+      <view class="rightp">
+        <text class="b">您的预约超时未支付</text>
+        <text class="span">系统已自动关闭</text>
+      </view>
+    </view>
+  </view>
+  <!--已过期 && 未抢约-->
+  <view class="orderClose-nav" wx:if="{{dataList.orderStatus=='-1' && !dataList.serverUserId}}">
+    <view class="orderClose-cont">
+      <view class="i">
+        <image src="http://m.yihu365.com/images/xiaocxu/order_iconzt.png"></image>
+      </view>
+      <view class="rightp">
+        <text class="b">您的预约超时接单失败</text>
+        <text class="span">系统已自动关闭</text>
+      </view>
+    </view>
+  </view>
+
+  <!--已退款 未处理-->
+  <view class="orderClose-nav" wx:if="{{dataList.orderStatus=='3' && dataList.payStatus=='0'}}">
+    <view class="orderClose-cont">
+      <view class="i">
+        <image src="http://m.yihu365.com/images/xiaocxu/order_iconzt.png"></image>
+      </view>
+      <view class="rightp">
+        <text class="b">申请退款提交成功</text>
+        <text class="span">退款会在1-5个工作日内处理</text>
+      </view>
+    </view>
+  </view>
+
+  <!--已退款 已处理-->
+  <view class="orderClose-nav" wx:if="{{dataList.orderStatus=='3' && dataList.payStatus=='2'}}">
+    <view class="orderClose-cont">
+      <view class="i">
+        <image src="http://m.yihu365.com/images/xiaocxu/order_iconzt.png"></image>
+      </view>
+      <view class="rightp">
+        <text class="b">退款已处理</text>
+        <text class="span">请及时关注支付账户的金额</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="top-tishi" wx:if="{{!(dataList.orderStatus=='-1' || dataList.orderStatus=='3')}}">
+    <block wx:for="{{tips}}">
+      <view class="p">{{item}}</view>
+    </block>
+  </view>
+
+  <view class="lianxi" wx:if="{{dataList.serverUserId && dataList.orderStatus!='-1'}}">
+    <view class="icophone" wx:if="{{dataList.orderStatus=='1' || (dataList.orderStatus=='2' && !dataList.communicateFlag)}}" bindtap="telNurse">
+      <image src="http://m.yihu365.com/images/xiaocxu/telIcon.png"></image>
+    </view>
+    <view class="xq_block">
+      <view class="items"><text class="xq_block_l">就医助理</text>{{dataList.serverUserName}}</view>
+      <view class="items"><text class="xq_block_l">联系电话</text>{{serviceTel}}</view>
+    </view>
+  </view>
+
+  <view class="order-list">
+    <view class="top">挂号陪诊
+      <text class="haolei">【{{dataList.pzGhType}}】</text>
+      <view class="zhuangtai" wx:if="{{dataList.orderStatus=='0'}}">待抢约</view>
+      <view class="zhuangtai" wx:if="{{dataList.orderStatus=='4' && dataList.payStatus=='-1'}}">待付款</view>
+      <view class="zhuangtai" wx:if="{{dataList.orderStatus=='1'}}">待服务</view>
+      <view class="zhuangtai" wx:if="{{dataList.orderStatus=='2'}}">已服务</view>
+      <view class="zhuangtai" wx:if="{{dataList.orderStatus=='3' && dataList.payStatus=='-1'}}">已取消</view>
+      <view class="zhuangtai" wx:if="{{dataList.orderStatus=='7'}}">人工取消</view>
+      <view class="zhuangtai" wx:if="{{dataList.orderStatus=='-1'}}">已过期</view>
+      <view class="zhuangtai" wx:if="{{dataList.orderStatus=='3' && dataList.payStatus=='0'}}">退款中</view>
+      <view class="zhuangtai" wx:if="{{dataList.orderStatus=='3' && dataList.payStatus=='2'}}">已退款</view>
+    </view>
+    <view class="ordermsg-cont">
+      <view class='items'>
+        <view class="left-bt">医院</view>
+        <view class="right-txt">{{dataList.pzGhHospital}}</view>
+      </view>
+      <view class='items'>
+        <view class="left-bt">科室</view>
+        <view class="right-txt">{{dataList.departName}}</view>
+      </view>
+      <view class='items' wx:if="{{dataList.pzDoctorName}}">
+        <view class="left-bt">医生</view>
+        <view class="right-txt">{{dataList.pzDoctorName}}</view>
+      </view>
+      <view class='items' wx:if="{{dataList.diseaseName}}">
+        <view class="left-bt">疾病</view>
+        <view class="right-txt">{{dataList.diseaseName}}</view>
+      </view>
+
+      <view class='items'>
+        <view class="left-bt">日期</view>
+        <view class="right-txt" wx:if="{{dataList.serviceTimeStart1}}">
+          <view class="time-no">{{serviceStart}} - {{serviceEnd}}</view>
+          <view>{{serviceStart1}} - {{serviceEnd1}} <text class="fontgreen" catchtap="lookTime">点击查看</text></view>
+        </view>
+        <view class="right-txt" wx:else>{{serviceStart}} - {{serviceEnd}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="order-list">
+    <view class="top">就诊信息</view>
+    <view class="ordermsg-cont">
+      <view class='items'>
+        <view class="left-bt">患　者</view>
+        <view class="right-txt">{{dataList.patientName}} {{dataList.patientSex=='0'?'男':'女'}} {{dataList.patientAge}}岁 {{dataList.relationship}}</view>
+      </view>
+      <view class='items'>
+        <view class="left-bt">手机号</view>
+        <view class="right-txt">{{dataList.mobile}}</view>
+      </view>
+      <view class='items'>
+        <view class="left-bt">身份证</view>
+        <view class="right-txt">{{dataList.patientIdCardNo}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="order-list" wx:if="{{dataList.desc}}">
+    <view class="top">备注信息</view>
+    <view class="ordermsg-cont">{{dataList.desc}}</view>
+  </view>
+  <view class="order-list">
+    <view class="ordermsg-jiage">
+      <!--<block wx:if="{{(dataList.orderStatus=='3' && dataList.payStatus=='-1') || (dataList.orderStatus=='-1' && !dataList.serverUserId)}}">
+        <block wx:for="{{dataList.addedService}}">
+          <view class="items">
+            <view class="left-bt1">{{item.addedServiceItem}}</view>
+            <view class="right-txt1">90-900元</view>
+          </view>
+        </block>
+      </block>
+      <block wx:else>
+        <block wx:for="{{dataList.addedService}}">
+          <view class="items">
+            <view class="left-bt1">{{item.addedServiceItem}}</view>
+            <view class="right-txt1">{{item.addedServicePrice}}元</view>
+          </view>
+        </block>
+      </block>-->
+      <block wx:for="{{dataList.addedService}}">
+        <view class="items">
+          <view class="left-bt1">{{item.addedServiceItem}}</view>
+          <view class="right-txt1" wx:if="{{dataList.voucher_sum}}">{{dataList.only_price}}元</view>
+          <view class="right-txt1" wx:else>{{dataList.payPrice!='0'?dataList.payPrice:dataList.only_price}}元</view>
+        </view>
+      </block>
+
+      <view class="items">
+        <view class="left-bt1">挂号费</view>
+        <view class="right-txt1">另收</view>
+      </view>
+      <!--代金券-->
+      <block wx:if="{{!((dataList.orderStatus=='3' && dataList.payStatus=='-1') || dataList.orderStatus=='0' || dataList.orderStatus=='-1')}}">
+        <view class="items" wx:if="{{dataList.voucher_sum}}">
+          <view class="left-bt1">代金券</view>
+          <view class="right-txt1">{{dataList.voucher_sum}}元</view>
+        </view>
+        <view class="items" wx:if="{{dataList.payPrice && dataList.payPrice!='0'}}">
+          <view class="left-bt1">实付金额</view>
+          <view class="right-txt1">{{dataList.payPrice}}元</view>
+        </view>
+        <view class="items" wx:else>
+          <view class="left-bt1">实付金额</view>
+          <view class="right-txt1">{{dataList.only_price}}元</view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <view class="order-time"><text>发布时间 {{creatTime}}</text>
+    <view>预约号 {{dataList.orderId}} </view>
+  </view>
+  <view class="bottom">
+
+    <view class="bottom-cont" wx:if="{{dataList.orderStatus=='0'}}">
+      <view bindtap="cancleOrderPay">取消预约</view>
+    </view>
+
+    <view class="bottom-cont" wx:if="{{dataList.orderStatus=='4' && dataList.payStatus=='-1'}}">
+      <view bindtap="goToPay" class="cur">去支付</view>
+    </view>
+
+    <view class="bottom-cont" wx:if="{{dataList.orderStatus=='1'}}">
+      <view wx:if="{{dataList.drawbackFlag=='0'}}" bindtap="drawbackEvent">申请退款</view>
+      <view bindtap="telLine" wx:else>客服专线</view>
+      <view bindtap="sureDoor" class="cur">确认已就诊</view>
+    </view>
+
+    <view class="bottom-cont" wx:if="{{dataList.orderStatus=='2' || dataList.orderStatus=='-1' || dataList.orderStatus=='3' || dataList.orderStatus=='7'}}">
+      <view bindtap="orderAgain">再次预约</view>
+    </view>
+  </view>
+</view>
+
+<!--错误弹框-->
+<modal class="modal modalFalse" hidden="{{dialogBlen}}" no-cancel bindconfirm="modalChange" bindcancel="modalChange">
+  <view>{{dialogMsg}}</view>
+</modal>
+
+<!--取消预约-->
+<modal class="modal" hidden="{{cancleModal}}" bindconfirm="detailCancleChange" bindcancel="modalChange" wx:if="{{dataList.orderStatus=='0'}}">
+  <view>预约号源紧张，您确定取消预约吗？</view>
+  <radio-group bindchange="cancelRadio" class="cancleRadio">
+    <view><label><radio color="#1cc6a3" value="001" checked="{{radioBlen}}"></radio>写错信息重新预约</label></view>
+    <view><label><radio color="#1cc6a3" value="002"></radio>重复下单</label></view>
+    <view><label><radio color="#1cc6a3" value="003"></radio>个人原因不需要了</label></view>
+    <view><label><radio color="#1cc6a3" value="004"></radio>其他原因</label></view>
+    <view wx:if="{{otherResult}}"><input class="otherCon" bindinput="otherResult" /></view>
+  </radio-group>
+</modal>
+<!--<view class="windbg" wx:if="{{!cancleModal}}">
+  <view class="windcont">
+    <view class='modalPad'>预约号源紧张，您确定取消预约吗？</view>
+    <radio-group bindchange="cancelRadio" class="cancleRadio radioCss">
+      <view><label><radio value="001" checked="{{radioBlen}}"></radio>写错信息重新预约</label></view>
+      <view><label><radio value="002"></radio>重复下单</label></view>
+      <view><label><radio value="003"></radio>个人原因不需要了</label></view>
+      <view><label><radio value="004"></radio>其他原因</label></view>
+      <view wx:if="{{otherResult}}"><input class="otherCon" bindinput="otherResult" /></view>
+    </radio-group>
+    <view class="windBbtn">
+      <text bindtap="modalChange">取消</text>
+      <text class="cur" bindtap="detailCancleChange">确定</text>
+    </view>
+  </view>
+</view>-->
+
+<!--退款弹框-->
+<modal class="modal" hidden="{{drawbackModal}}" bindconfirm="detailDrawbackChange" bindcancel="modalChange">
+  <view>请选择退款原因</view>
+  <radio-group bindchange="cancelRadio" class="cancleRadio">
+    <view><label><radio color="#1cc6a3" value="001" checked="{{radioBlen}}"></radio>写错信息重新预约</label></view>
+    <view><label><radio color="#1cc6a3" value="002"></radio>重复下单</label></view>
+    <view><label><radio color="#1cc6a3" value="003"></radio>个人原因不需要了</label></view>
+    <view><label><radio color="#1cc6a3" value="004"></radio>其他原因</label></view>
+    <view wx:if="{{otherResult}}"><input class="otherCon" bindinput="otherResult" /></view>
+  </radio-group>
+</modal>
+<!-- 退款第一个弹框 -->
+<modal class="modal" hidden="{{drawbackModalFirst}}" bindconfirm="detailDrawbackChangeFirst" bindcancel="modalChange">
+  <view class="p1">{{drawbackModalFirstInfo}}</view>
+  <view class="winda1">
+    <!--<text bindtap="lookInfo">查看退款规则</text>-->
+    <navigator url="/pages/drawbackInfo/drawbackInfo" hover-class="none">查看退款规则</navigator>
+  </view>
+</modal>
+<!--查看退款说明
+<view class="drawbackInfo" wx:if="{{drawbackInfo}}">
+  <text class="close" bindtap="closeDrawbackInfo"></text>
+  <view class="tguize">
+    <view class="li"><text>1.</text>距离就诊时间大于24小时，将余额退款;</view>
+    <view class="li"><text>2.</text>距离就诊时间小于等于24小时，将扣除50%;</view>
+    <view class="li"><text>3.</text>未填写最终就诊时间的，距离实际预约时间（最晚）大于24小时，将全额退款;</view>
+    <view class="li"><text>4.</text>未填写最终就诊时间的，距离实际预约时间（最晚）小于等于24小时，将扣除50%</view>
+    <view class="beizhu">备注：扣款不含陪诊费用（当未提供陪诊服务时，陪诊费用不扣款）如有疑问可拨打客服热线4000-122-789</view>
+  </view>
+</view>-->
+
+<!--确认服务弹框-->
+<modal class="modal" hidden="{{doorSureBlen}}" bindconfirm="doorSureEvent" bindcancel="modalChange">
+  <view class="center">已完成挂号陪诊服务？</view>
+</modal>
+
+<!--拨打护士电话-->
+<modal class="modal" hidden="{{telNurseBlen}}" bindconfirm="telNurseEvent" bindcancel="modalChange">
+  <view class="center">是否拨打就医助理手机？</view>
+</modal>
+
+<!--修改时间 查看-->
+<view class="windbg" wx:if="{{serviceTimeModal}}">
+  <view class="windcont">
+    <view class="windBt">就诊时间说明</view>
+    <view class="p1">就诊时间为此时间段内的其中一天（具体以医生出诊等实际情况为准），不支持任选日期。支付订单即认可此时间就诊。</view>
+    <view class="windBbtn onlyBtn" catchtap="timeModalClose">
+      <text>知道了</text>
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{fixedModal}}" class="fixedModal">{{fiexedCon}}</view>

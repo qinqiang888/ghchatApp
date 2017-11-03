@@ -1,0 +1,70 @@
+<view class="ghdz_search">
+    <view class="right_search_b">
+        <view class="right_search_block">
+            <input type="text" bindinput="back" bindconfirm="searchHospital_docotr" placeholder="搜索医院名称/关键字" />
+        </view>
+    </view>
+    <view class="search_qdbtn" bindtap="cancel">取消</view>
+</view>
+<block wx:if="{{confirm==false}}">
+    <view class="cyl_yiyuan">
+        <view class="ul" wx:for="{{historySearch}}">
+            <view class="li" data-keyword="{{item}}" bindtap="click_search">{{item}}</view>
+        </view>
+        <view hidden="{{qingkong}}" class="qingkong" bindtap="clear">清空全部历史记录</view>
+    </view>
+</block>
+<block wx:else>
+    <view wx:if="{{hospitalList==''&& doctorList==''}}" class="nonrbox">
+        <view class="nonrimg">
+            <image class="img" src="http://m.yihu365.com/images/xiaocxu/nonr.png"></image>
+        </view>
+        <view class="text">没有您要的内容，换个词试试吧~</view>
+    </view>
+    <view wx:else>
+    <view  class="jgbox">
+        <view class="jgtop">
+            <view class="jgtop_lt">医院</view>
+            <view class="jgtop_rt"  data-type="hospital" bindtap="viewMore">查看更多</view>
+        </view>
+        <view class="allhosp" wx:for="{{hospitalList}}">
+            <view class="allhosp-li" data-hospitalId="{{item.hospitalId}}" data-hospitalName="{{item.name}}" data-code="{{item.cityCode}}" data-pic="{{item.hospitalPic?item.hospitalPic:morenpic}}"bindtap="depart">
+                <view class="left-img">
+                    <image class="img" src="{{item.hospitalPic?item.hospitalPic:morenpic}}"></image>
+                </view>
+                <view class="right-cont">
+                    <view class="h1">
+                        <view class="fl">{{item.name}}</view>
+                        <view class="fr">{{item.hospitalNum}}位医生</view>
+                    </view>
+                    <view class="h2">{{item.city}}｜{{item.grade}}</view>
+                    <view class="h3">简介：{{item.introduction?item.introduction:''}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="jgbox">
+        <view class="jgtop">
+            <view class="jgtop_lt">医生</view>
+            <view class="jgtop_rt" data-type="doctor" bindtap="viewMore">查看更多</view>
+        </view>
+        <view class="allhosp" wx:for="{{doctorList}}">
+            <view class="allhosp-li" data-firDepartmentName="{{item.departName}}" data-secondDepartmentName="{{item.subDepartName}}"data-hospitalId="{{item.hospitalId}}" data-hospitalName="{{item.hospitalName}}" data-doctorId="{{item.doctorId}}" data-doctor="{{item.doctor}}" data-departId="{{item.departId}}" data-subDepartId="{{item.subDepartId}}"   data-code="{{item.cityCode}}" data-pic="{{item.hospitalPic}}" bindtap="order">
+                <view class="left-img2">
+                    <image class="img" src="{{item.headPic?item.headPic:doctorPic}}"></image>
+                </view>
+                <view class="right-cont marg">
+                    <view class="h1">
+                        <view class="fl">{{item.doctor}}</view>
+                        <view class="f1">{{item.title}}</view>
+                    </view>
+                    <view class="h2">{{item.hospitalName}}｜{{item.departName}}</view>
+                    <view class="h3">擅长：{{item.specialty?item.specialty:''}}</view>
+                </view>
+            </view>
+
+        </view>
+    </view>
+    </view>
+</block>
+<loading  hidden="{{loading}}">加载中</loading>

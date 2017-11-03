@@ -1,0 +1,11 @@
+<!--drawbackInfo.wxml-->
+<view class="drawbackInfo">
+  <!--<text class="close" bindtap="closeDrawbackInfo"></text>-->
+  <view class="tguize">
+    <view class="li"><text>1.</text>距离就诊时间大于24小时，将余额退款;</view>
+    <view class="li"><text>2.</text>距离就诊时间小于等于24小时，将扣除50%;</view>
+    <view class="li"><text>3.</text>未填写最终就诊时间的，距离实际预约时间（最晚）大于24小时，将全额退款;</view>
+    <view class="li"><text>4.</text>未填写最终就诊时间的，距离实际预约时间（最晚）小于等于24小时，将扣除50%</view>
+    <view class="beizhu">备注：扣款不含陪诊费用（当未提供陪诊服务时，陪诊费用不扣款）如有疑问可拨打客服热线4000-122-789</view>
+  </view>
+</view>

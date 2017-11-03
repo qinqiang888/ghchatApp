@@ -1,0 +1,167 @@
+.bgw {
+  background: #fff;
+}
+
+.modal view{
+  text-align: center;
+}
+
+.mf_fix {
+  padding: 0 0 75px 0;
+}
+
+.fline_block {
+  display: block;
+  height: auto;
+  position: relative;
+  padding: 12px 35px 12px 15px;
+  border-bottom: 1px solid #e8ebf0;
+}
+
+.nameico {
+  background: url(http://m.yihu365.com/images/name.png) no-repeat center center;
+  background-size: 100% auto;
+}
+
+.ipblock {
+  margin-left: 40px;
+  margin-right: 20px;
+}
+
+.ipblock input, .gender_input {
+  width: 100%;
+  border: 0;
+  height: 24px;
+  line-height: 20px;
+  font: 16px arial;
+}
+
+input[type="text"] {
+  border: none;
+  outline: medium;
+}
+
+.shenfico {
+  background: url(http://m.yihu365.com/images/shenfen.png) no-repeat center center;
+  background-size: 100% auto;
+}
+
+.fline_block {
+  display: block;
+  height: auto;
+  position: relative;
+  padding: 12px 35px 12px 15px;
+  border-bottom: 1px solid #e8ebf0;
+}
+
+.genderico {
+  background: url(http://m.yihu365.com/images/gender.png) no-repeat center center;
+  background-size: 100% auto;
+}
+
+.dizhiico, .louico, .nameico, .shenfico, .genderico, .guanxiico {
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  margin-top: -12px;
+}
+
+.gender_block {
+  margin-right: 100px;
+  margin-left: 40px;
+}
+
+.gender_ch {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  height: 24px;
+  width: auto;
+  line-height: 24px;
+  margin-top: -12px;
+}
+
+.gendercur {
+  float: left;
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.genderno {
+  float: left;
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.gender_ch radio {
+  float: left;
+  margin-right: 10px;
+ 
+}
+
+.fline_block {
+  display: block;
+  height: auto;
+  position: relative;
+  padding: 12px 35px 12px 15px;
+  border-bottom: 1px solid #e8ebf0;
+}
+
+.guanxiico {
+  background: url(http://m.yihu365.com/images/hzgx.png) no-repeat center center;
+  background-size: 100% auto;
+}
+
+.txtgrey {
+  color: #a9a9a9;
+  height: 24px;
+  line-height: 24px;
+  display: block;
+  font-size: 16px;
+}
+
+.dizhimore {
+  display: block;
+  width: 30px;
+  height: 24px;
+  background: url(http://m.yihu365.com/images/dizhi03.png) no-repeat center center;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -12px;
+  background-size: 18px auto;
+}
+
+.foobtnone {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  background-color: #fff;
+}
+
+.foobtnrend {
+  display: block;
+  background-color: #1cc6a3;
+  color: #fff;
+  height: 44px;
+  line-height: 44px;
+  font-size: 17px;
+  border-radius: 5px;
+  margin: 15px;
+}
+.gray{
+       color:#808080;
+}
+
+.gx_v{
+  position: absolute;
+  right: 50%;
+  top: 30%;
+}

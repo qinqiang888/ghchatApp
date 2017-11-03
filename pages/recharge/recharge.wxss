@@ -1,0 +1,30 @@
+.body_cur {background: #f0f2f5;height:100%}
+.bak{background: #fff;border-bottom:1px solid #e9e9e9;border-top:1px solid #e9e9e9;margin-top: 5px; }
+.xcx_cz{padding: 0 15px;background: #fff;overflow: hidden}
+.czbj{background: url("http://m.yihu365.com/images/czbj.png")no-repeat center;width: 18px;height: 18px;display: inline-block;float: left;background-size: 100%;margin-top: 20px;}
+.xcx_ipt input{height: 58px;line-height: 58px;border: 0;font-size: 16px;margin-left: 30px;}
+.kyye{padding: 15px;}
+.kyye span{font-size: 16px;color: #666666;}
+.em{font-size: 16px;color: #e84345;margin-left: 15px;}
+.wxbtn{position: absolute;bottom:15px;width: 90%;left: 5%;}
+.wxbtn button{height: 44px;line-height: 44px;text-align: center;font-size: 19px;color: #fff;width: 100%;background: #1cc6a3;border-radius: 5px;border: 0;}
+button{
+    background: #1cc6a3;
+    color: #fff;
+}
+button[disabled][type="default"], wx-button[disabled]:not([type]) {
+color:rgba(0, 0, 0, 0.3);
+background-color:#1cc6a3;
+
+}
+page {
+  display: block;
+  min-height: 100%;
+  background-color: #f1f2f6;
+  color:#525a66;
+}
+
+
+
+
+    

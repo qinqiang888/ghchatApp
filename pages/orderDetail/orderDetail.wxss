@@ -1,0 +1,439 @@
+.layout {
+  font-size: 14px;
+  background: #f0f2f5;
+  color: #525a66;
+  font-family: Microsoft YaHei;
+}
+
+.orderClose-nav {
+  width: 100%;
+  height: 38px;
+  padding: 26px 0;
+  background: #fff;
+}
+
+.orderClose-cont {
+  width: 84%;
+  margin-left: 16%;
+  height: 38px;
+  position: relative;
+  display: table;
+}
+
+.orderClose-cont .i {
+  position: absolute;
+  left: 0;
+}
+
+.orderClose-cont .i image {
+  width: 36px;
+  height: 38px;
+}
+
+.rightp {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 45px;
+}
+
+.rightp text.b {
+  display: block;
+  font-size: 18px;
+  color: #222;
+  margin-top: -4px;
+}
+
+.rightp text.span {
+  color: #666;
+  font-size: 12px;
+}
+
+.order-list {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  margin-top: 10px;
+  color: #222;
+}
+
+.order-list .top {
+  height: 40px;
+  line-height: 40px;
+  margin-left: 15px;
+  border-bottom: 1px solid #e6e6e6;
+  font-size: 15px;
+}
+
+.haolei {
+  font-size: 13px;
+}
+
+.zhuangtai {
+  float: right;
+  color: #e84345;
+  padding-right: 15px;
+}
+
+.ordermsg-cont {
+  padding: 10px 15px;
+}
+
+.ordermsg-cont .items {
+  width: 100%;
+  height: auto;
+  line-height: 22px;
+  position: relative;
+}
+
+.left-bt {
+  width: 55px;
+  display: inline-block;
+  color: #999;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.right-txt {
+  display: block;
+  margin-left: 55px;
+}
+
+.ordermsg-cont:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.time-no {
+  text-decoration: line-through;
+  color: #666;
+}
+
+.fontgreen {
+  color: #1cc6a3;
+}
+
+.right-txt .fontgreen {
+  text-decoration: underline;
+  padding-left: 15px;
+}
+
+.ordermsg-jiage {
+  padding: 10px 0 10px 15px;
+}
+
+.ordermsg-jiage .items {
+  height: auto;
+  line-height: 22px;
+  padding-right: 15px;
+}
+
+.ordermsg-jiage .items.last {
+  border-top: 1px solid #e6e6e6;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+.ordermsg-jiage .items:after, .order-time:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.ordermsg-jiage .left-bt1 {
+  width: 100px;
+  display: inline-block;
+  color: #999;
+  float: left;
+}
+
+.ordermsg-jiage .right-txt1 {
+  display: block;
+  float: right;
+}
+
+.order-time {
+  padding: 10px 15px;
+  margin-bottom: 10px;
+}
+
+.order-time text {
+  float: left;
+}
+
+.order-time view {
+  float: right;
+}
+
+.time-queren {
+  background: #fbf2bf;
+  color: #856543;
+  text-align: center;
+  height: 36px;
+  line-height: 36px;
+}
+
+.time-queren text {
+  color: #e84345;
+  padding: 0 5px;
+}
+
+.fuwulc image {
+  width: 100%;
+  height: 130px;
+  display: block;
+}
+
+.top-tishi {
+  background: #fff;
+  border-top: 1px solid #e6e6e6;
+  padding: 10px 15px;
+  color: #999;
+}
+
+.top-tishi .p {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.top-tishi .p:first-child {
+  font-size: 14px;
+  padding-bottom: 3px;
+  display: block;
+}
+
+.lianxi {
+  position: relative;
+  margin-top: 10px;
+}
+
+.icophone {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.icophone image {
+  height: 40px;
+  width: 40px;
+}
+
+.xq_block {
+  padding: 10px 15px;
+  background: #fff;
+}
+
+.xq_block .items {
+  margin: 0;
+  position: relative;
+  padding: 0 0 0 80px;
+  line-height: 22px;
+  border: 0;
+}
+
+.xq_block_l {
+  width: auto;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #999;
+  text-align: left;
+}
+
+.cancleRadio {
+  margin-top: 10px;
+}
+
+.cancleRadio view {
+  margin: 16px 0;
+}
+
+.cancleRadio radio {
+  margin-top: -4px;
+  vertical-align: top;
+}
+
+.otherCon {
+  height: 20px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px #aaa solid;
+  background: #fff;
+}
+
+.fixedModal {
+  height: 25px;
+  padding: 10px 0;
+  line-height: 25px;
+  width: 76%;
+  position: fixed;
+  left: 12%;
+  background: rgba(0, 0, 0, 0.5);
+  top: 40%;
+  border-radius: 5px;
+  z-index: 100000;
+  color: #fff;
+  text-align: center;
+}
+
+.modalFalse view {
+  text-align: center;
+}
+
+.modal .p1 {
+  padding: 15px 15px 0 15px;
+  line-height: 22px;
+}
+
+.modal .winda1 {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding: 15px;
+  text-decoration: underline;
+  color: #1cc6a3;
+}
+
+.drawbackInfo {
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10000;
+}
+
+.tguize {
+  padding: 40px 15px 15px;
+  font-size: 15px;
+}
+
+.tguize .li {
+  line-height: 24px;
+  position: relative;
+  padding-left: 30px;
+  padding-bottom: 5px;
+}
+
+.tguize .li text {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 5px;
+}
+
+.beizhu {
+  color: #999;
+  font-size: 13px;
+  padding-left: 5px;
+  line-height: 22px;
+}
+
+.close {
+  display: block;
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  background: url(http://m.yihu365.com/images/close.png) no-repeat 0 0/100%;
+  width: 15px;
+  height: 15px;
+}
+
+.windbg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1002;
+}
+
+.windcont {
+  width: 280px;
+  height: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  border-radius: 2px;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+  color:#666;
+}
+
+
+.winda1 {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding: 15px;
+}
+
+
+.windBt {
+  text-align: center;
+  display: block;
+  padding-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+.p1 {
+  padding: 15px;
+  line-height: 22px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+}
+
+.windBbtn {
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  font-size: 14px;
+  border-top: 1px solid #e6e6e6;
+  color:#333;
+}
+
+
+
+.windBbtn text {
+  width: 50%;
+  text-align: center;
+  display: inline-block;
+  color:#333;
+}
+
+.windBbtn text.cur {
+  color: #1cc6a3;
+  border-left: 1px solid #e6e6e6;
+  width: 49%;
+}
+
+.onlyBtn text {
+  text-align: center;
+  display: block;
+  width: 100%;
+  color: #1cc6a3;
+  border-left: medium none;
+}
+
+.modalPad{
+  padding:15px;
+}
+.radioCss{
+  font-size:13px;
+  padding:0 15px;
+  color:#666;
+}

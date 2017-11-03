@@ -1,0 +1,362 @@
+/* order.wxss */
+.barg {
+  background: #fff;
+}
+
+
+
+image {
+  width: 100%;
+  height: 100%;
+}
+
+textarea::-webkit-input-placeholder {
+  color: #bcbcbc;
+}
+
+.height10 {
+  height: 10px;
+  background: #f0f2f5;
+}
+
+.order_s3, .order_s4 {
+  border-bottom: 1px solid #e8ebf0;
+  border-top: 1px solid #e8ebf0;
+  background: #fff;
+}
+
+.order_s3 .item {
+  margin-left: 15px;
+  border-bottom: 1px solid #e8ebf0;
+  padding: 10px 0;
+  position: relative;
+}
+
+.order_s3 .item:last-child, .order_s4 items:last-child {
+  border-bottom: 0;
+}
+
+.icotime, .icombz, .icotimeB, .icotimeE, .icotimeS, .icotimeEnd {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+  left: 0;
+}
+
+.icotime {
+  background: url(http://m.yihu365.com/images/xiaocxu/fwlb1.png) no-repeat center center;
+  background-size: 80%;
+}
+
+.icotimeB {
+  background: url(http://m.yihu365.com/images/xiaocxu/fwlb2.png) no-repeat center center;
+  background-size: 80%;
+}
+
+.icotimeS {
+  background: rgba(0, 0, 0, 0) url("http://m.yihu365.com/images/icotimeB.png") no-repeat scroll center center / 80% auto;
+}
+
+.icotimeEnd {
+  background: rgba(0, 0, 0, 0) url("http://m.yihu365.com/images/icotimeE.png") no-repeat scroll center center / 80% auto;
+}
+
+.icotimeE {
+  background: url(http://m.yihu365.com/images/xiaocxu/fwlb3.png) no-repeat center center;
+  background-size: 80%;
+}
+
+.icombz {
+  background: url(http://m.yihu365.com/images/xiaocxu/fwlb5.png) no-repeat center center;
+  background-size: 80%;
+}
+
+.txtcon {
+  display: block;
+  margin: 0 40px 0 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  color: #a9a9a9;
+}
+
+.dizhimore {
+  display: block;
+  width: 13px;
+  height: 100%;
+  background: url(http://m.yihu365.com/images/xiaocxu/rjt.png) no-repeat center;
+  position: absolute;
+  right: 25px;
+  top: 0;
+  background-size: 7px auto;
+}
+
+.order_s3 .order_beizhu {
+  margin-right: 15px;
+}
+
+.or_bz_cont {
+  background: #f1f2f6;
+  border-radius: 5px;
+  padding: 10px 10px 10px 40px;
+  overflow: hidden;
+}
+
+.icobeizhu {
+  background: url(http://m.yihu365.com/images/xiaocxu/fwlb4.png) no-repeat center center;
+  background-size: 75%;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+
+.or_bz_cont textarea {
+  height: 48px;
+  line-height: 24px;
+  width: 100%;
+  background: #f1f2f6;
+  border: 0;
+  font-size: 14px;
+  outline: none;
+  resize: none;
+  color: #222;
+  top:-5px;
+}
+
+.choose_haozj {
+  margin: 0 0 0 40px;
+}
+
+.choose_haozj text {
+  width: 144px;
+  height: 42px;
+  line-height: 42px;
+  margin-right: 10px;
+  display: inline-block;
+  border: 1px solid #b2b8c2;
+  border-radius: 4px;
+  text-align: center;
+  color: #999;
+}
+
+.choose_haozj text.cur {
+  color: #1cc6a3;
+  border: 1px solid #1cc6a3;
+}
+
+.icofuwu {
+  background: url(http://m.yihu365.com/images/xiaocxu/fulx.png) no-repeat center center/80%;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+
+.tishi {
+  float: right;
+  font-size: 12px;
+  color: #bcbcbc;
+}
+
+.fw-more {
+  position: absolute;
+  right: 15px;
+  color: #999;
+  top: 20px;
+  height: 20px;
+  line-height: 20px;
+  display: block;
+  background: url(http://m.yihu365.com/images/xiaocxu/rjt.png) no-repeat right center;
+  background-size: 7px auto;
+  padding-right: 15px;
+}
+
+.order_s4 .items {
+  border-bottom: 1px solid #e8ebf0;
+  font-size: 16px;
+  padding: 10px 0;
+  position: relative;
+  margin-left: 15px;
+}
+
+.order_s4 .items label {
+  border-bottom: 1px solid #e8ebf0;
+  font-size: 16px;
+  padding: 10px 0;
+  position: relative;
+  display: block;
+}
+
+.order_s4 .items:last-child {
+  border: medium none;
+  padding: 0;
+}
+
+.order_s4 .items label:last-child {
+  border: medium none;
+}
+
+.txtcon1 {
+  display: block;
+  margin: 0 40px 0 0;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  color: #222;
+}
+
+radio {
+  position: absolute;
+  right: 15px;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.genderno {
+  position: absolute;
+  right: 15px;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  display: block;
+  background: url(http://m.yihu365.com/images/xiaocxu/ghwxz.png) no-repeat center center;
+  background-size: 100%;
+}
+
+.zhezhao {
+  background: #8de2d1;
+}
+
+.yybox {
+  position: relative;
+  border-bottom: 1px solid #e6e6e6;
+  height: 55px;
+  padding: 12px 15px;
+}
+
+.yyimg {
+  position: absolute;
+  left: 15px;
+  top: 12px;
+  width: 55px;
+  height: 55px;
+}
+
+.yyimg img {
+  width: 55px;
+  height: 55px;
+  border-radius: 3px;
+}
+
+.yyjs {
+  margin: 7px 0 0 70px;
+}
+
+.yyjs .hospital_h1 {
+  display: block;
+  height: 20px;
+  line-height: 20px;
+}
+
+.yyjs .hospital_h1 text {
+  color: #222;
+  font-size: 16px;
+}
+
+.yyjs .hospital_h1 span {
+  color: #999;
+  font-size: 13px;
+}
+
+.yyjs .hospital_h2 {
+  color: #999;
+  font-size: 13px;
+  height: 28px;
+  line-height: 28px;
+}
+
+@media screen and (max-width: 375px) {
+  .choose_haozj text {
+    width: 130px;
+    height: 38px;
+    line-height: 38px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .choose_haozj text {
+    width: 115px;
+    height: 34px;
+    line-height: 34px;
+  }
+}
+
+.black {
+  color: #333;
+}
+
+.windbg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.windcont {
+  width: 280px;
+  height: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  border-radius: 2px;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+
+.p1 {
+  padding: 15px;
+  line-height: 22px;
+  text-align: center;
+  font-size: 14px;
+  color:#333;
+}
+
+.windBbtn {
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  font-size: 15px;
+  position: relative;
+}
+
+.windBbtn:before {
+  border-top: 1px solid #e6e6e6;
+  display: block;
+  width: 100%;
+  height: 44px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+}
+
+.windBbtn text {
+  text-align: center;
+  display: block;
+  color: #1cc6a3;
+}
+
+

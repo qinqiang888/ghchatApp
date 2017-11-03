@@ -1,0 +1,38 @@
+
+    <view  class="jgbox" wx:if="{{type=='hospital'}}">
+        <view class="allhosp" wx:for="{{List}}">
+            <view class="allhosp-li"  data-hospitalId="{{item.hospitalId}}" data-hospitalName="{{item.name}}" data-code="{{item.cityCode}}" data-pic="{{item.hospitalPic?item.hospitalPic:hospitalPic}}" bindtap="depart">
+                <view class="left-img">
+                    <image class="img" src="{{item.hospitalPic?item.hospitalPic:hospitalPic}}"></image>
+                </view>
+                <view class="right-cont">
+                    <view class="h1">
+                        <view class="fl">{{item.name}}</view>
+                        <view class="fr">{{item.hospitalNum}}位医生</view>
+                    </view>
+                    <view class="h2">{{item.city}}｜{{item.grade}}</view>
+                    <view class="h3">简介：{{item.introduction?item.introduction:''}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view  wx:else class="jgbox">
+        <view class="allhosp" wx:for="{{List}}">
+            <view class="allhosp-li" data-hospitalId="{{item.hospitalId}}" data-hospitalName="{{item.hospitalName}}" data-doctorId="{{item.doctorId}}" data-doctor="{{item.doctor}}" data-departId="{{item.departId}}" data-subDepartId="{{item.subDepartId}}"   data-code="{{item.cityCode}}" data-pic="{{item.hospitalPic}}" bindtap="order">
+                <view class="left-img2">
+                    <image class="img" src="{{item.headPic?item.headPic:doctorPic}}"></image>
+                </view>
+                <view class="right-cont marg">
+                    <view class="h1">
+                        <view class="fl">{{item.doctor}}</view>
+                        <view class="f1">{{item.title}}</view>
+                    </view>
+                    <view class="h2">{{item.hospitalName}}｜{{item.departName}}</view>
+                    <view class="h3">擅长：{{item.specialty?item.specialty:''}}</view>
+                </view>
+            </view>
+
+        </view>
+    </view>
+  <loading wx:if="{{load=='加载中'}}"  hidden="{{loading}}">{{load}}</loading>
+<view  wx:else  hidden="{{loading}}" style="text-align:center">{{load}}</view>

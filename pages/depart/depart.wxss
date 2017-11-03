@@ -1,0 +1,61 @@
+.keshi_xzbg {
+  background: #fff url(http://m.yihu365.com/58/images/xzkeshi_bg.png) repeat-y 0 0;
+  background-size: 101px auto;
+  height:100vh;
+}
+
+.xzks {
+  width: 101px;
+  float: left;
+}
+.downgrey{ background:#DFE3E8}
+.xzks .li {
+  color: #222;
+  width: 100px;
+  display: block;
+  height: 43px;
+  line-height: 43px;
+  text-indent: 15px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.xzks .cur {
+  background: #fff;
+  border-right: 1px solid #fff;
+  padding-top: 0;
+}
+
+.zhili_bz {
+  background-color: white;
+  height: 100%;
+  overflow: auto;
+  margin-left: 100px;
+}
+
+.zhili_bz_bt {
+  height: 44px;
+  margin-left: 10px;
+  padding: 0 10px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.bz_p {
+  line-height: 44px;
+  font-size: 15px;
+  color: #222;
+  display: inline-block;
+}
+
+.bz_p.cur {
+  color: #1cc6a3;
+}
+
+.em_img {
+  background: url("http://m.yihu365.com/images/xiaocxu/xzg.png")no-repeat center;
+  background-size: 15px;
+  position: absolute;
+  right: 15px;
+  top: 0;
+  width: 15px;
+  height: 44px;
+}

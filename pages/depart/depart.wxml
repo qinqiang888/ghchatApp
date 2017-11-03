@@ -1,0 +1,25 @@
+<view class="keshi_xzbg">
+<view class="xzks">
+    <view wx:for="{{departList}}" hover-class="downgrey">
+        <view wx:if="{{index==curdepart_index}}" class="li cur" bindtap="get_index" data-index="{{index}}"data-id="{{item.departId}}" >{{item.departName}}</view>
+        <view wx:else class="li" bindtap="get_index" data-index="{{index}}">{{item.departName}}</view>
+    </view>
+</view>
+<view class="zhili_bz mg_lt">
+    <view wx:for="{{subdepartList}}" hover-class="downgrey" >
+         <!-- <view class="zhili_bz_bt">
+            <p class="bz_p cur">骨科</p>
+            <view  class="em_img"></view>
+        </view>  -->
+        <!-- <view wx:if="{{index==subdepartindex}}"class="zhili_bz_bt" bindtap="order" data-index="{{index}}" data-id="{{item.subDepartId}}">
+            <view class="bz_p cur">{{item.subDepartName}}</view>
+            <rich-text  name="em"type="nodes" class="em_img"></rich-text>
+        </view> -->
+          <view  class="zhili_bz_bt"  bindtap="order" data-departname="{{departList[curdepart_index].departName}}" data-departId="{{departList[curdepart_index].departId}}"  data-subDepartName="{{item.subDepartName}}"data-index="{{index}}" data-subDepartId="{{item.subDepartId}}">
+            <view class="bz_p">{{item.subDepartName}}</view>
+        </view>
+
+    </view>
+</view>
+
+</view>

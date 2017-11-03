@@ -1,0 +1,56 @@
+<view class="body">
+  <view class="bg_grey">
+    <view class="ava">
+      <view class="ava-left">
+        <view class="p">当前余额（元）</view>
+        <view class="p p-jine">{{rechargeItem.nowAmount}}</view>
+        <view class="p">冻结金额 {{rechargeItem.freezeFee}}</view>
+      </view>
+      <view class="ava-right">
+        <view bindtap="recharge" class="recharge">充值</view>
+      </view>
+    </view>
+    <view class="mingxi-bt">账户明细</view>
+
+    <!--時間抽開始-->
+    <view class="xjls_con" wx:if="{{rechargeItem.List.length>0}}">
+      <view class="mingxi">
+        <view class="top-biao"></view>
+
+        <!--年份-->
+
+        <!--充值列表开始-->
+        <block wx:for="{{listItem}}">
+          <view class="li" wx:if="{{item.year}}">
+            <view class="years">
+              <view class="p">{{item.year}}</view>
+            </view>
+          </view>
+
+
+          <!--年结束-->
+          <view class="li">
+            <view class="mx-left">
+              <view class="mx-day">
+                {{item.date}}
+              </view>
+              {{item.time}}
+              <view class="time-biaoji"></view>
+            </view>
+            <view class="mx-right">
+              <view class="fgreen">
+                <view class="flar" wx:if="{{item.type==1}}">+ {{item.JFNum}} 元</view>
+                <view class="flar" wx:else>- {{item.JFNum}} 元</view>
+              </view>
+              <view class="fl">来自{{item.trdType}}</view>
+            </view>
+          </view>
+        </block>
+
+        <!--充值列表结束-->
+      </view>
+    </view>
+  </view>
+
+  <!--時間抽結束-->
+</view>

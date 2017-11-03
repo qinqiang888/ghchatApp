@@ -1,0 +1,41 @@
+page {
+  display: block;
+  min-height: 100%;
+  background-color: #f1f2f6;
+}
+.body_cur {background: #f0f2f5;}
+.bak{background: #fff;border-top:1px solid #e9e9e9;margin-top: 5px; }
+.zfd{margin-left: 15px;}
+.li{border-bottom: 1px solid #e9e9e9;position: relative}
+.zfd .span{height: 59px;line-height: 59px;text-align: center;}
+
+text{
+ height: 59px;
+    line-height: 64px;
+    text-align: center;
+}
+.xcx_je{background: url("http://m.yihu365.com/images/xcx_je.png")no-repeat center; }
+.xcx_yh{background: url("http://m.yihu365.com/images/xcx_yh.png")no-repeat center;}
+.i{height: 34px;width: 34px;display: inline-block;float:left;background-size: 100%;margin-top: 13px;}
+.sp_lt{color: #222222;font-size: 16px;text-indent: 10px;display: inline-block;}
+.sp_rt{font-size: 16px;display: inline-block;float: right;margin-right: 17px;}
+.padrt{padding-right: 15px;color: #999999;}
+.padcur{padding-right: 15px;color: #222222;}
+.index_blockMore{position: absolute;right: 8px;top: 50%;margin-top: -6px;}
+.index_blockMore image{width: 16px;height: 12px;}
+.xcx_sf{height: 60px;line-height: 60px;padding: 0 15px;font-size: 16px;color: #222222;position: relative;background: #fff;border-bottom:1px solid #e9e9e9;}
+.sfje{position: absolute;right:15px; height: 0px;line-height: 0px;}
+.sfje .xcx_em{color: #e84345;}
+.tishi{padding: 15px;font-size: 12px;color: #999999;line-height: 18px;height: 18px;text-indent:0px;}
+.wxbtn{position: absolute;bottom:15px;width: 90%;left: 5%;}
+.wxbtn input{height: 44px;line-height: 44px;text-align: center;font-size: 19px;color: #fff;width: 100%;background: #1cc6a3;border-radius: 5px;border: 0;}
+.yfje{float:left;color: #222222;font-size: 16px; }
+button{
+    background: #1cc6a3;
+    color: #fff;
+}
+button[disabled][type="default"], wx-button[disabled]:not([type]) {
+color:rgba(0, 0, 0, 0.3);
+background-color:#1cc6a3;
+
+}

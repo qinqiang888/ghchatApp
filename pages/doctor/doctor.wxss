@@ -1,0 +1,62 @@
+/* doctor.wxss */
+
+.allhosp {
+  background: #fff;
+  padding: 0 0 0 15px;
+}
+
+.ys-li {
+  position: relative;
+  border-bottom: 1px solid #e6e6e6;
+  height: 55px;
+  padding: 15px 15px 15px 0;
+}
+
+.ys-li:last-child {
+  border: 0;
+}
+
+.ystx {
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 60px;
+  height: 60px;
+}
+
+.ystx image {
+  width: 55px;
+  height: 55px;
+  border-radius: 3px;
+}
+
+.ysjieshao {
+  margin: 7px 0 0 65px;
+}
+
+.ysjieshao view.h1 {
+  display: block;
+  height: 20px;
+  line-height: 20px;
+}
+
+.ysjieshao view.h1 text {
+  color: #222;
+  font-size: 16px;
+}
+
+
+
+.ysjieshao view.h2 {
+  color: #999;
+  font-size: 13px;
+  height: 28px;
+  line-height: 28px;
+}
+
+.loadingText {
+  font-size: 13px;
+  text-align: center;
+  padding:10px 0 15px;
+  color:#333;
+}

@@ -1,0 +1,64 @@
+/* disease.wxss */
+
+.barg {
+  background: #fff;
+}
+
+.yxbox {
+  padding: 17px 15px;
+  background: #fff;
+  border-bottom: 1px solid #e6e6e6;
+  overflow: hidden;
+}
+
+.yxks_img {
+  float: left;
+}
+
+.yxks_img image {
+  width: 50px;
+  height: 50px;
+}
+
+.yixuan {
+  float: left;
+  font-size: 16px;
+  color: #999;
+  margin-left: 15px;
+  height: 50px;
+  line-height: 50px;
+}
+
+.yixuan text {
+  color: #222;
+}
+
+.height10 {
+  height: 10px;
+  background: #f0f2f5;
+}
+
+.bzbox {
+  padding: 15px 10px;
+  border-top: 1px solid #e6e6e6;
+  background: #fff;
+  overflow: hidden;
+}
+
+.bzbox view {
+  float: left;
+  padding: 10px 10px;
+  text-align: center;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  margin: 0 7px 15px 7px;
+  box-sizing: border-box;
+  font-size: 13px;
+  color: #666;
+}
+
+.bzbox view.cur {
+  background: #2cc5a3;
+  border: 1px solid #2cc5a3;
+  color: #fff;
+}

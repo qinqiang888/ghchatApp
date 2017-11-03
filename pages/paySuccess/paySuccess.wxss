@@ -1,0 +1,72 @@
+page {
+  color: #525a66;
+}
+
+.result_picbox {
+  text-align: center;
+  padding: 65px 20px 20px;
+}
+
+@media only screen and (max-width: 320px) {
+  .result_picbox {
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+}
+
+.image {
+  width: 65%;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.result_con {
+  text-align: center;
+  line-height: 20px;
+  padding: 0 20px;
+}
+
+.result_con .h5 {
+  font-size: 24px;
+  line-height: 30px;
+  padding: 10px 0;
+  font-weight: 400;
+  display: block;
+}
+
+.result_con .p {
+  font-size: 15px;
+  margin: 5px 15px;
+  padding: 0;
+  line-height: 22px;
+  display: block;
+}
+
+
+.result_con p.mintxt {
+  width: 70%;
+  font-size: 12px;
+  color: #848c99;
+  margin: 0 auto;
+}
+
+.order_btn {
+  margin: 50px auto 0 auto;
+  text-align: center;
+}
+
+button {
+  width: 90%;
+  background: #1cc6a3;
+  color: #fff;
+}
+
+button[disabled][type="default"], wx-button[disabled]:not([type]) {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #1cc6a3;
+}
+
+.button-hover {
+  background-color: #1cc6a3;
+  opacity: 0.7;
+}

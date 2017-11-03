@@ -1,0 +1,20 @@
+
+<view class="body_cur">
+    <view class="bak">
+        <view class="xcx_cz">
+            <view class="czbj"></view>
+            <view class="xcx_ipt">
+                <input type="digit" bindblur="inputvalue" disabled="{{inputdisabled}}" value="{{fee}}"placeholder="输入充值金额"></input>
+            </view>
+        </view>
+    </view>
+    <view class="kyye"><view>可用余额<text class="em">{{ableUseFee}}元</text></view></view>
+    <view class="wxbtn">
+        <button bindtap="recharge" disabled="{{disabled}}" loading="{{loading}}">{{title}}</button>
+    </view>
+
+</view>
+
+<modal class="modal" hidden="{{dialogBlen}}" no-cancel bindconfirm="modalChange" bindcancel="modalChange">
+  <view>{{dialogMsg}}</view>
+</modal>

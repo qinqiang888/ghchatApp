@@ -1,0 +1,362 @@
+/* introduce.wxss */
+.content{
+  color:#737373;
+  font-family: "Microsoft YaHei";
+  font-size:14px;
+}
+
+.lineHeight view{
+  margin:5px 0;
+}
+.header {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  z-index: 1;
+  color: #212121;
+}
+
+header .h1 {
+  font-size: 19px;
+  color: #404040;
+  position: relative;
+  font-weight: normal;
+}
+
+
+.return {
+  display: block;
+  position: absolute;
+  left: 10px;
+  width: 30px;
+  height: 50px;
+  color: #404040;
+  text-decoration: none;
+}
+
+.return image {
+  width: 25px;
+  height: 25px;
+  margin-top: 12px;
+}
+
+.banner {
+  width: 100%;
+  height: auto; /*border-bottom:1px solid #ddd;*/
+}
+
+.banner image {
+  width: 100%;
+  height: 150px;
+}
+
+.fwxq {
+  padding: 15px;
+}
+
+.fwxqico {
+  background: url("http://m.yihu365.com/images/ghpz.png")no-repeat center;
+  width: 22px;
+  height: 22px;
+  background-size: 100%;
+  display: inline-block;
+  position: absolute;
+}
+
+.service {
+  position: relative;
+}
+
+.service .title {
+  height: 22px;
+  line-height: 22px;
+  text-indent: 32px;
+  display: block;
+  font-size: 16px;
+  color: #222;
+  font-weight: bold;
+}
+.bold{
+  font-weight: bold;
+}
+
+.fwtop {
+  margin: 30px auto 0 auto;
+  width: 135px;
+}
+
+.fwtop image {
+  width: 135px;
+  height: 45px;
+}
+
+.jianj {
+  font-size: 13px;
+  color: #222;
+  line-height: 20px;
+  margin-top: 20px;
+}
+
+.ghdq image {
+  width: 100%;
+  height: 150px;
+  margin: 10px 0;
+}
+
+.fugai {
+  font-size: 13px;
+  color: #888;
+  line-height: 18px;
+}
+
+.jgts {
+  padding: 5px 15px 15px;
+  background: #f3fff2;
+  margin-top: 15px;
+}
+
+.dian {
+  width: 3px;
+  height: 3px;
+  background: #88b983;
+  display: inline-block;
+  border-radius: 50%;
+  float:left;
+  margin-top: 8px;
+  margin-right: 10px;
+}
+
+.jgts .ts {
+  font-size: 13px;
+  color: #88b983;
+  width: 95%;
+  float: left;
+  line-height: 20px;
+}
+
+.jgts .items {
+  margin-top: 5px;
+  overflow: hidden;
+}
+
+.jjiz {
+  font-size: 13px;
+  color: #88b983;
+  text-align: center;
+}
+
+.syz_img {
+  width: 100px;
+  height: 100px;
+  display: block;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.syz_img image {
+  width: 100px;
+  height: auto;
+}
+
+.gjpz {
+  color: #222;
+  font-size: 14px;
+  display: block;
+}
+
+.syz {
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+.syz li {
+  width: 112px;
+  margin-top: 25px;
+  height: 142px;
+}
+
+.syz li:nth-child(odd) {
+  float: left;
+}
+
+.syz li:nth-child(even) {
+  float: right;
+}
+
+.syz li .wenzi {
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+@media screen and (min-width:375px) {
+  .syz {
+    padding: 0 40px;
+  }
+}
+
+.pz_cj {
+  font-size: 17px;
+  color: #202020;
+  margin-top: 20px;
+  position:relative;
+}
+
+.pz_cj text {
+  padding-left: 7px;
+}
+
+.ghlt {
+  background: url("http://m.yihu365.com/images/ghlt.png")no-repeat center;
+  width: 3px;
+  height: 22px;
+  background-size: 100%;
+  display: inline-block;
+  position: absolute;
+  left:0;
+  top:0;
+}
+
+.cjfu {
+  font-size: 13px;
+  color: #202020;
+  margin-top: 10px;
+}
+
+.taocan {
+  padding: 10px;
+  background: #fff;
+}
+
+.taocan span {
+  font-size: 17px;
+  color: #282828;
+}
+
+.jine {
+  margin-top: 5px;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.jine .xianjia {
+  float: left;
+  color: #e6454a;
+}
+
+.jine .yuanjia {
+  float: right;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.sx {
+  margin: 20px 0;
+}
+
+.tsfw {
+  background: #ffc056;
+}
+
+.tsfw img {
+  width: 100%;
+  height: auto;
+}
+
+.jpfw {
+  background: #e8edf3;
+  padding: 10px 45px 25px 45px;
+}
+
+.zltop2 {
+  width: 97px;
+  margin: 15px auto;
+}
+
+.zltop2 img {
+  width: 97px;
+  height: auto;
+}
+
+.jinpin {
+  padding-top: 15px;
+}
+
+header.wxNewh {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background: #fff;
+  border-bottom: 1px solid #ececee; /*margin-bottom:10px*/
+  position: inherit;
+}
+
+.wxNew_head {
+  position: fixed;
+  top: 0;
+  z-index: 11;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  background: #fafafa;
+}
+
+.wxNew_head h1 {
+  font-weight: normal;
+  font-size: 16px;
+  position: relative;
+}
+
+.wxNew_head .return {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 44px;
+  height: 50px;
+}
+
+.wxNew_head .return img {
+  width: 26px;
+  height: 26px;
+  margin-top: 12px;
+  margin-left: 15px;
+}
+
+.hide {
+  display: none;
+}
+
+.fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #e5e5e5;
+}
+
+.fixed_btn {
+  width: 90%;
+  margin: 15px auto;
+  background: #fff;
+}
+
+.fixed_btn a {
+  width: 100%;
+  height: 44px;
+  background: #2cc5a3;
+  display: block;
+  text-align: center;
+  line-height: 44px;
+  color: #fff;
+  font-size: 19px;
+  border-radius: 3px;
+  text-decoration: none;
+}

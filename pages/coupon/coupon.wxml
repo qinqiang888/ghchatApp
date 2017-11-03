@@ -1,0 +1,50 @@
+<view class="body">
+  <view class="body_cur">
+    <block wx:if="{{copitem.length<=0}}">
+      <view class="zwdjq">
+        <view class="zquanno">
+          <image class="img" src="http://m.yihu365.com/images/zquanno.png"></image>
+        </view>
+        <view class="nodjq">您还没有代金券</view>
+      </view>
+    </block>
+    <block wx:else>
+    <view  wx:if="{{orderId!==''}}">
+          <view wx:for="{{copitem}}" class="itrm-list">
+        <view class="zquan-list" data-voucherId="{{item.voucherId}}" bindtap="choice" data-price="{{item.price}}">
+          <view class="daiquan">
+            <image src="http://m.yihu365.com/images/zquan01.png" class="z-quanpic"></image>
+            <view class="zmianzhi">
+              <view class="qianzhui">¥</view>
+              {{item.price}}
+            </view>
+            <view class="zquantime">{{item.endTime}}</view>
+            <view class="zquan_sm">注：{{item.remark}}</view>
+            <view wx:if="{{item.voucherId==couponId}}"class="zquamokico"></view>
+          </view>
+        </view>
+      </view>
+      <view class="sure_fixed">
+        <view class="z-btn">
+          <button class="z-greenbtn2" bindtap="sure">确定</button>
+        </view>
+      </view>
+    </view>
+    <view  wx:else>
+          <view wx:for="{{copitem}}">
+        <view class="zquan-list">
+          <view class="daiquan">
+            <image src="http://m.yihu365.com/images/zquan01.png" class="z-quanpic"></image>
+            <view class="zmianzhi">
+              <view class="qianzhui">¥</view>
+              {{item.price}}
+            </view>
+            <view class="zquantime">{{item.endTime}}</view>
+            <view class="zquan_sm">注：{{item.remark}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    </block>
+  </view>
+</view>

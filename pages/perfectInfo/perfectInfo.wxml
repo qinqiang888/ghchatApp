@@ -1,0 +1,65 @@
+<form bindsubmit="formSubmit">
+  <view class="zlogin bgg">
+    <view class="zlogin-inputview2">
+      <view class="wanshanBox">
+        <view class="my-list">
+          <view class="zh">昵称</view>
+          <input type="text" bindblur='blurnickname' wx:if="{{array[0]==''||array[0]==null}}" placeholder="请输入昵称" />
+          <input wx:else type="text" value="{{array[0]}}" disabled/>
+        </view>
+        <view class="my-list">
+          <view class="zh">手机号</view>
+          <input type="text" value="{{array[1]}}" disabled/>
+        </view>
+        <view class="my-list">
+          <view class="zh">真实姓名</view>
+          <input type="text" wx:if="{{array[2]!==''}}" value="{{array[2]}}" disabled/>
+          <input type="text" wx:else  bindinput="blurname" placeholder="请输入真实姓名"/>
+        </view>
+        <view class="my-list">
+          <view class="zh">身份证号</view>
+          <input type="text" wx:if="{{array[3]==''}}" placeholder="请输入身份证" bindblur='blurcard' />
+          <input type="text" wx:else value="{{array[3]}}" disabled/>
+        </view>
+        <view class="my-list">
+          <view class="zh">性别</view>
+          <view wx:if="{{setsex==''}}">
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{sex}}">
+              <view class="zh" wx:if="{{index==10}}">
+                请选择性别
+              </view>
+              <view class="picker" wx:else>
+                {{sex[index]}}
+              </view>
+            </picker>
+          </view>
+          <view wx:else>
+            <view class="zh" wx:if="{{index==10}}">
+              {{setsex}}
+            </view>
+          </view>
+        </view>
+        <view class="my-list">
+          <view class="zh">身高</view>
+          <input type="number" wx:if="{{array[4]==''}}" placeholder="身高" bindblur='blurheight' />
+          <input type="number" wx:else bindblur='blurheight' value="{{array[4]}}" />
+          <view class="view-2">cm</view>
+        </view>
+        <view class="my-list">
+          <view class="zh">体重</view>
+          <input type="number" wx:if="{{array[5]==''}}" placeholder="体重" bindblur='blurweight' />
+          <input type="number" wx:else bindblur='blurweight' value="{{array[5]}}"/>
+          <view class="view-2">kg</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="botm-btn">
+    <view class="foobtnone">
+      <button class="foobtnrend" bindtap="bindsave">保存</button>
+    </view>
+  </view>
+</form>
+<modal class="modal" hidden="{{dialogBlen}}" no-cancel bindconfirm="modalChange" bindcancel="modalChange">
+  <view>{{dialogMsg}}</view>
+</modal>

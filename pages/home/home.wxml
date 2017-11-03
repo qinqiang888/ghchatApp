@@ -1,0 +1,60 @@
+<view class="body">
+  <view class="Wxzmytop">
+    <view class="Wxzmyphoto">
+      <image class="logo" bindtap="optionImage" src="{{headPic}}"></image>
+    </view>
+    <view class="Wxzmyname">{{user.userRealName}}</view>
+    <view class="Wxzmy-right">
+      <navigator url="{{jumpUrl.userInfoUrl}}" open-type="navigate" id="info">{{isRealInfo}} </navigator>
+    </view>
+  </view>
+  <view class="Wxzhch50">
+    <navigator url="{{jumpUrl.accountUrl}}" class="Wxzzhanghu">
+      <image src="http://m.yihu365.com/images/wxzhanghu.png"></image>
+      <view>我的账户</view>
+    </navigator>
+    <navigator url="{{jumpUrl.rechargeUrl}}" class="Wxzchongzhi">
+      <image src="http://m.yihu365.com/images/wxchongz.png"></image>
+      <view>充值</view>
+    </navigator>
+  </view>
+  <view class="wrap2 bgw bord13">
+
+    <navigator class="zlogin-yanz bordb" url="{{jumpUrl.orderListUrl}}">
+      <view class="cz">
+        <image src="http://m.yihu365.com/images/wxyuyue.png"></image>我的预约</view>
+      <view class="z-yanzh-btn"><text class="gou2"></text></view>
+    </navigator>
+    <navigator url="/pages/coupon/coupon" class="zlogin-yanz  bordn">
+      <view class="cz">
+        <image src="http://m.yihu365.com/images/wxquan.png"></image><text>我的代金券</text></view>
+      <view class="z-yanzh-btn"><text class="gou2"></text></view>
+    </navigator>
+
+  </view>
+  <view class="z-main1">
+    <view class="zlogin-yanz bordn" bindtap="tell">
+      <view class="cz">
+        <image src="http://m.yihu365.com/images/wxkefu.png"></image>客服
+        <view class="z-yanzh-btn fgreen">4000-122-789</view>
+      </view>
+
+    </view>
+  </view>
+  <view class="z-btn">
+    <button bindtap="isconfirm"  style="border:1px solid #1cc6a3" disabled="{{disabled}}" loading="{{loading}}" class="z-whitebtn2">退出当前账号</button>
+  </view>
+</view>
+<view class="foot">
+    <view class='footer'>
+        <view class="ul">
+            <view class="lifoot">
+                <navigator open-type="redirect" url="/pages/index/index"><view class="p yuyue">预约挂号</view></navigator>
+            </view>
+            <view class="cur lifoot">
+                <view class="p wode">我的</view>
+            </view>
+
+        </view>
+    </view>
+</view>

@@ -1,0 +1,16 @@
+<!--disease.wxml-->
+<view class="barg container">
+  <view class="yxbox">
+      <view class="yxks_img"><image src="{{hospitalImg ? hospitalImg : 'http://m.yihu365.com/images/xiaocxu/yxks.png'}}"></image></view>
+      <view class="yixuan">已选科室：<text>{{firstDepartment+' '+secondDepartment}}</text></view>
+  </view>
+  <view class="height10"></view>
+  <view class="bzbox">
+    <block wx:for="{{diseaseListArray}}">
+      <view class="{{currentId==item.diseaseId ? 'cur' : ''}}" bindtap="tapEvent" data-id="{{item.diseaseId}}" data-name="{{item.diseaseName}}">{{item.diseaseName}}</view>
+    </block>
+  </view>
+</view>
+<modal class="modal" hidden="{{dialogBlen}}" no-cancel bindconfirm="modalChange" bindcancel="modalChange">
+    <view class="center">{{dialogMsg}}</view>
+</modal>

@@ -1,0 +1,92 @@
+<!--introduce.wxml-->
+<view class="content">
+
+<view class="banner">
+  <image src="http://m.yihu365.com/images/pzbanner.jpg" alt=""></image>
+</view>
+
+<view class="fwxq">
+  <view class="service">
+    <view class="fwxqico"></view>
+    <text class="bold title">挂号陪诊</text>
+  </view>
+  <view>
+    <view class="item">
+      <view class="fwtop">
+        <image src="http://m.yihu365.com/images/ghtop01.png"></image>
+      </view>
+
+      <view class="jianj">
+        服务投诉电话：010-64757617 或 010-64757691
+        <view>官方客服电话：4000122789</view>
+        <view>投诉邮箱：guahaotousu@qq.com</view>
+      </view>
+      <view class="ghdq">
+        <image src="http://m.yihu365.com/images/ghdq.jpg"></image>
+      </view>
+      <view class="fugai">目前已覆盖北京、上海、广州、深圳、天津、南京、杭州、成都、重庆、济南、青岛、长沙、武汉、西安、郑州等60多个一二线和省会城市。</view>
+    </view>
+    <view class="item">
+      <view class="fwtop">
+        <image src="http://m.yihu365.com/images/ghtop02.png"></image>
+      </view>
+      <view class="pz_cj">
+        <view class="ghlt"></view>
+        <text>初级导诊</text>
+      </view>
+      <view style="margin-top:20px;" class="lineHeight">
+        初级陪诊服务，根据地域不同，服务内容有所区别
+        <view>1、一线城市：北京、上海、广州、深圳</view>
+        <view>① 陪诊护士接到订单后30分钟内联系用户，沟通症状、病史、挂号情况及就诊科室。</view>
+        <view>② 就诊前至少15小时，陪诊护士电话联系患者，告知整体就医流程、涉及费用、提醒就诊时间、就诊和取号所需证件、就诊技巧等信息，并发送短信告知用户。</view>
+        <view>③ 就诊完成后，电话回访客户，了解就诊情况、用户满意度以及下次预约注意事项</view>
+        <view>2、一线城市以外的城市：</view>
+      </view>
+      <view class="ListParagraph1" style="font-weight:bold;font-family: 宋体;">服务内容：排队挂号（不含取号服务）、电话导诊等相关服务</view>
+      <view class="jgts">
+        <view class="items">
+          <view class="jjiz">注意事项</view>
+        </view>
+        <view class="items">
+          <view class="dian"></view>
+          <view class="ts">如遇专家临时停诊或遭遇其他不可抗力因素，陪诊护士将第一时间通知患者或家属。</view>
+        </view>
+      </view>
+    </view>
+    <view class="item">
+      <view class="pz_cj">
+        <view class="ghlt"></view>
+        <text>高级陪诊</text>
+      </view>
+      <view style="margin-top:20px;font-weight:bold;font-family: 宋体;">（1）诊前指导</view>
+      <view>① 陪诊护士接到订单后30分钟内联系用户，沟通症状、病史、挂号情况及就诊科室，并约定就诊行程；</view>
+      <view>② 就诊前至少15小时，陪诊护士电话联系患者，告知整体就医流程、涉及费用、提醒就诊时间、就诊和取号所需证件、见面时间和地点以及陪诊服务时间等信息，并发送短信告知用户</view>
+      <view style="margin-top:8px;font-weight:bold;font-family: 宋体;">（2）就诊陪护</view>
+      <view>① 就诊当天，护士须提前到达就诊医院，见面时必须主动出示护士执业证或复印件，交换患者本人证件。（需要当天取号的，需将患者安排舒适位置后，再单独取号）</view>
+      <view>② 如需取号，取号完成后，将挂号单及挂号费发票交给用户，收取发票金额的挂号费，并告知就诊技巧及注意事项。如，简单快速向医生提问，检查和处方注意事项，再次挂号加号等问题处理技巧</view>
+      <view>③ 就诊陪护。陪同患者完成整个就诊过程。逐一告知并陪同至检验科，B超室，缴费窗口，取药窗口，取化验单窗口等重要位置。当天住院的患者，护士应陪同办理住院手续。</view>
+      <view style="margin-top:8px;font-weight:bold;font-family: 宋体;">（3）时间说明</view>
+      <view>① 高级陪诊时间说明：</view>
+      <view style="text-indent:1em;">周一到周日7:30-19:00内，高级标准陪诊时间4小时，自护士患者约定时间起至陪诊结束，超时但不跨越12:00上下午的订单无需超时费；跨越12:00上下午的订单需按照<text style="color:red;">50元/小时</text>另计费用</view>
+      <view>② 取消时间规定：就诊前一天18:00前取消不计费，过时取消的订单正常计费。</view>
+      <view style="margin-top:8px;font-weight:bold;font-family: 宋体;">（4）以下情况护士有权拒绝提供服务</view>
+      <view>① 重症和急救病人</view>
+      <view>② 无亲属陪护的12岁以内儿童和70岁以上的老人</view>
+      <view>③ 门急诊留观病人</view>
+      <view>④ 精神病、传染病的病人</view>
+      <view>⑤ 醉酒状态的病人</view>
+      <view class="jgts">
+        
+        <view class="items">
+          <view class="jjiz">注意事项</view>
+        </view>
+        <view class="items">
+          <view class="dian"></view>
+          <view class="ts">以上服务内容根据实际情况，由陪诊提供电话或者现场指导服务</view>
+        </view>
+       
+      </view>
+    </view>
+  </view>
+</view>
+</view>

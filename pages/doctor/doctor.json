@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "选择医生",
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#f7f8fa",
+  "backgroundTextStyle": "dark"
+}

@@ -1,0 +1,105 @@
+<view class="order-nav">
+  <view bindtap="tapEvent">
+    <view class="li {{typeStatus=='0'?'cur':''}}" data-code="0">全部</view>
+    <view class="li {{typeStatus=='1'?'cur':''}}" data-code="1">待付款</view>
+    <view class="li {{typeStatus=='2'?'cur':''}}" data-code="2">待服务</view>
+    <view class="li {{typeStatus=='3'?'cur':''}}" data-code="3">待评价</view>
+  </view>
+</view>
+<view class="order-list" wx:for="{{List}}">
+
+  <block wx:if="{{item.roleType=='003'}}">
+    <view wx:if="{{item.serviceCode=='001'}}" catchtap="listEvent" data-id="{{item.orderId}}">
+      <view class="top" >{{item.fuwu}}<i class="haolei">{{item.professionStr ? ('【'+item.professionStr+'】') : ''}}</i>
+        <view wx:if="{{item.status == '-1'}}" class="zhuangtai">已过期</view>
+        <view wx:if="{{item.status == '7'}}" class="zhuangtai">人工取消</view>
+        <view wx:if="{{item.status == '3' && item.payStatus=='-1'}}" class="zhuangtai">已取消</view>
+        <view wx:if="{{item.status == '0'}}" class="zhuangtai">待抢约</view>
+        <view wx:if="{{item.status == '1'}}" class="zhuangtai">待服务</view>
+        <view wx:if="{{item.status == '2'}}" class="zhuangtai">已服务</view>
+        <view wx:if="{{item.status == '4' && item.payStatus=='-1'}}" class="zhuangtai">待付款</view>
+        <view wx:if="{{item.status == '3' && item.payStatus=='0'}}" class="zhuangtai">退款中</view>
+        <view wx:if="{{item.status == '3' && item.payStatus=='2'}}" class="zhuangtai">已退款</view>
+      </view>
+      <view class="order-cont">
+        <view class="li"><i class="icon-yy"></i>{{item.hospitalName}}</view>
+        <view class="li"><i class="icon-time"></i>{{item.serviceTime}}</view>
+        <view class="li"><i class="icon-feiy"></i>{{'服务费'+item.amount+'元'}}</view>
+      </view>
+      <view wx:if="{{item.status == '0'}}" class="order-bot"> <a catchtap="cancleOrderPay" data-id="{{item.orderId}}">取消预约</a> </view>
+      <view wx:elif="{{item.status == '4' && item.payStatus=='-1'}}" class="order-bot"><a class="cur" catchtap="goToPay" data-id="{{item.orderId}}" data-price="{{item.amount}}">去支付</a></view>
+      <view wx:elif="{{item.status == '1'}}" class="order-bot"><a class="cur" data-id="{{item.orderId}}" catchtap="sureDoor">确认已就诊</a></view>
+      <!--<view wx:else class="order-bot"> <a >再次预约</a> </view>-->
+    </view>
+    <block wx:else>
+      <view class="top">{{item.fuwu}}<i class="haolei">{{item.professionStr ? ('【'+item.professionStr+'】') : ''}}</i>
+        <view wx:if="{{item.status == '-1'}}" class="zhuangtai">已过期</view>
+        <view wx:if="{{item.status == '7'}}" class="zhuangtai">人工取消</view>
+        <view wx:if="{{item.status == '3' && item.payStatus=='-1'}}" class="zhuangtai">已取消</view>
+        <view wx:if="{{item.status == '0'}}" class="zhuangtai">待抢约</view>
+        <view wx:if="{{item.status == '1'}}" class="zhuangtai">待服务</view>
+        <view wx:if="{{item.status == '2'}}" class="zhuangtai">已服务</view>
+        <view wx:if="{{item.status == '4' && item.payStatus=='-1'}}" class="zhuangtai">待付款</view>
+        <view wx:if="{{item.status == '3' && item.payStatus=='0'}}" class="zhuangtai">退款中</view>
+        <view wx:if="{{item.status == '3' && item.payStatus=='2'}}" class="zhuangtai">已退款</view>
+      </view>
+      <view class="order-cont">
+        <view class="li"><i class="icon-yy"></i>{{item.hospitalName}}</view>
+        <view class="li"><i class="icon-time"></i>{{item.serviceTime}}</view>
+        <view class="li"><i class="icon-feiy"></i>{{'服务费'+item.amount+'元'}}</view>
+      </view>
+    </block>
+  </block>
+  <block wx:else>
+    <view class="top">{{item.fuwu}}<i class="haolei"></i>
+      <view wx:if="{{item.status == '-1' || item.status == '3' || item.status == '7'}}" class="zhuangtai">已取消</view>
+      <view wx:elif="{{item.status == '0'}}" class="zhuangtai">待抢约</view>
+      <view wx:elif="{{item.status == '1'}}" class="zhuangtai">待服务</view>
+      <view wx:elif="{{item.status == '2'}}" class="zhuangtai">已服务</view>
+      <view wx:elif="{{item.status == '4' && item.payStatus=='-1'}}" class="zhuangtai">待付款</view>
+    </view>
+    <view class="order-cont">
+      <view class="li" wx:if="{{item.serviceTime}}"><i class="icon-time"></i>{{item.serviceTime}}</view>
+      <view class="li" wx:if="{{item.roleType=='004'}}"><i class="icon-feiy"></i>服务{{item.times}}周</view>
+      <view class="li" wx:elif="{{item.roleType=='005'}}"><i class="icon-feiy"></i>服务{{item.times}}个月</view>
+      <view class="li" wx:else>
+        <block wx:if="{{item.times}}">
+          <i class="icon-feiy"></i>{{'服务费'+item.amount+'元'+'/'+item.times+'次'}}
+        </block>
+        <block wx:else>
+          <i class="icon-feiy"></i>服务费{{item.amount}}
+        </block>
+      </view>
+    </view>
+  </block>
+</view>
+
+<view class="loadingText" hidden="{{loadingBlen}}">
+  <view wx:if="{{loadingEnd}}">
+    <image src="http://m.yihu365.com/images/xiaocxu/loading.gif" style="width:35px;height:35px;vertical-align:middle"></image>正在加载...</view>
+  <view wx:else>加载完成</view>
+</view>
+
+<!--错误弹框-->
+<modal class="modal modalFalse" hidden="{{dialogBlen}}" no-cancel bindconfirm="modalChange" bindcancel="modalChange">
+  <view>{{dialogMsg}}</view>
+</modal>
+
+<!--取消预约-->
+<modal class="modal" hidden="{{cancleModal}}" bindconfirm="detailCancleChange" bindcancel="modalChange">
+  <view>预约号源紧张，您确定取消预约吗？</view>
+  <radio-group bindchange="cancelRadio" class="cancleRadio">
+    <view><label><radio value="001" checked="{{radioBlen}}"></radio>写错信息重新预约</label></view>
+    <view><label><radio value="002"></radio>重复下单</label></view>
+    <view><label><radio value="003"></radio>个人原因不需要了</label></view>
+    <view><label><radio value="004"></radio>其他原因</label></view>
+    <view wx:if="{{otherResult}}"><input class="otherCon" bindinput="otherResult" /></view>
+  </radio-group>
+</modal>
+
+<!--确认服务弹框-->
+<modal class="modal" hidden="{{doorSureBlen}}" bindconfirm="doorSureEvent" bindcancel="modalChange">
+  <view class="center">已完成挂号陪诊服务？</view>
+</modal>
+
+<view wx:if="{{fixedModal}}" class="fixedModal">{{fiexedCon}}</view>

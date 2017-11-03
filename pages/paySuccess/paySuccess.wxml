@@ -1,0 +1,13 @@
+<view class="container">
+  <view class="result_picbox">
+    <image class="image" src="http://m.yihu365.com/58/images/payyes.jpg"></image>
+  </view>
+  <view class="result_con">
+    <text class="h5">支付完成</text>
+
+    <text class="p">稍后将把就诊信息发送到{{userMobile}}，请注意查看</text>
+  </view>
+  <view class="botm-btn">
+    <view class="order_btn"><button class="foobtnrend" bindtap="orderDetail" hover-class="button-hover">查看详情</button></view>
+  </view>
+</view>

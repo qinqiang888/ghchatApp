@@ -1,0 +1,125 @@
+<!--order.wxml-->
+
+<view class="barg container">
+  <view class="yybox">
+    <view class="yyimg"><image src="{{hospitalImg ? hospitalImg : 'http://m.yihu365.com/images/xiaocxu/moren.jpg'}}"></image></view>
+    <view class="yyjs">
+      <view class="hospital_h1"><text class="fl">{{hospitalName}}</text></view>
+      <text class="hospital_h2">{{secondDepartment}}</text>
+    </view>
+  </view>
+  <view class="height10"></view>
+  <view class="order_s3">
+      <view class="item">
+        <view class="icofuwu"></view>
+        <text class="txtcon txtgrey">选择服务类型</text>
+        <view class="choose_haozj" bindtap="roleTypeEvent">
+          <!--<block wx:if="{{roleType=='002'}}">
+            <text class="cur" data-type="002">专家号</text>
+            <text data-type="002">特需号</text>
+          </block>
+          <block wx:else>
+            <text>专家号</text>
+            <text class="cur">特需号</text>
+          </block>-->
+          <text class="{{roleType=='002'?'cur':''}}" data-type="002">专家号</text>
+          <text class="{{roleType=='003'?'cur':''}}" data-type="003">特需号</text>
+        </view>
+      </view>
+      <!--<view class="item">
+        <view class="icotime"></view>
+        <text class="txtcon txtgrey">选择就诊时间</text>
+        <view class="dizhimore"></view>
+      </view>-->
+      <view class="item">
+          <view class="icotimeS"></view>
+          <picker bindchange="bindPickerChangeStart" value="{{serviceStartIndex}}"  range="{{serviceStart}}" class="txtcon txtgrey" >
+              <text wx:if="{{serviceStartIndex==''}}">开始时间</text>
+              <text class="black" wx:else>{{serviceStart[serviceStartIndex]}}</text>
+          </picker>
+          <view class="dizhimore"></view>
+      </view>
+
+      <view class="item">
+          <view class="icotimeEnd"></view>
+          <block wx:if="{{serviceStartIndex!=''}}">
+              <picker bindchange="bindPickerChangeEnd" range="{{serviceEnd}}" value="{{serviceEndIndex}}" class="txtcon txtgrey">
+                  <text wx:if="{{serviceEndIndex==''}}">结束时间</text>
+                  <text class="black" wx:else>{{serviceEnd[serviceEndIndex]}}</text>
+                  <!--<text class="black">{{serviceEnd[serviceEndIndex]}}</text>-->
+              </picker>
+          </block>
+          <view class="txtcon txtgrey" bindtap="startTimeNo" wx:else><text>结束时间</text></view>
+          <view class="dizhimore"></view>
+      </view>
+      <view class="item">
+        <view class="icotimeB"></view>
+        <navigator url="/pages/doctor/doctor" open-type="redirect" hover-class="none">
+          <text class="txtcon txtgrey black" wx:if="{{doctor}}">{{doctor}}</text>
+          <text class="txtcon txtgrey" wx:else>医生(不选，推荐最优)</text>
+        </navigator>
+        <view class="dizhimore"></view>
+      </view>
+      <view class="item">
+        <view class="icotimeE"></view>
+        <navigator url="/pages/selectPatientList/selectPatientList" open-type="redirect" hover-class="none">
+          <text class="txtcon txtgrey black" wx:if="{{patientObj}}">{{patientObj.name}} {{patientObj.sex}} {{patientObj.age}}岁 {{patientObj.relationship}}</text>
+          <text class="txtcon txtgrey" wx:else>就诊人信息</text>
+        </navigator>
+        <view class="dizhimore"></view>
+      </view>
+      <view class="item" wx:if="{{hasDisease}}">
+        <view class="icombz"></view>
+        <navigator url="/pages/disease/disease" open-type="redirect" hover-class="none">
+          <text class="txtcon txtgrey black" wx:if="{{diseaseName}}">{{diseaseName}}</text>
+          <text class="txtcon txtgrey" wx:else>选择疾病</text>
+        </navigator>
+        <view class="dizhimore"></view>
+      </view>
+      <view class="order_beizhu item">
+        <view class="or_bz_cont">
+          <view class="icobeizhu"></view>
+          <textarea type="text" bindinput="detailChange" placeholder="病情描述" value="{{details}}" />
+          <view class="tishi">不少于5个字</view>
+        </view>
+      </view>
+  </view>
+  <view class="height10"></view>
+  <view class="order_s4">
+    <view class="items">
+      <view class="txtcon1">服务介绍</view>
+      <navigator url="/pages/introduce/introduce" class="fw-more" hover-class="none">查看</navigator>
+    </view>
+    <view class="items">
+      <radio-group class="item" bindchange="radioEvent">
+          <label>
+            <text class="txtcon1">初级挂号导诊</text>
+            <radio value="22" color="#1cc6a3" checked="{{addPrice=='22'?true:false}}" />
+          </label>
+          <label>
+            <text class="txtcon1">高级挂号陪诊</text>
+            <radio value="23" color="#1cc6a3" checked="{{addPrice=='22'?false:true}}"/>
+          </label>
+      </radio-group>
+    </view>
+  </view>
+  <view class="height10"></view>
+  <view style="height: 75px;">
+    <view class="foobtnone">
+      <view class="foobtnrend" wx:if="{{serviceStartIndex!='' && serviceEndIndex!='' && patientObj && detailsBlen}}" bindtap="orderSubmit">立即预约</view>
+      <view class="foobtnrend zhezhao" wx:else>立即预约</view>
+    </view>
+  </view>
+</view>
+
+<!--<modal class="modal" hidden="{{dialogBlen}}" no-cancel bindconfirm="modalChange" bindcancel="modalChange">
+    <view class="center">{{dialogMsg}}</view>
+</modal>-->
+<view class="windbg" wx:if="{{!dialogBlen}}">
+  <view class="windcont">
+      <view class="center p1">{{dialogMsg}}</view>
+      <view class="windBbtn" bindtap="modalChange">
+        <text>确定</text>
+      </view>
+  </view>
+</view>

@@ -1,0 +1,101 @@
+.ztop {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: #fafafa;
+  border-bottom: 1px solid #d1d7d7;
+  position: fixed;
+  font-size: 14px;
+  z-index: 2;
+}
+
+.zreturn {
+  width: 26px;
+  height: 50px;
+  background: url(images/return.png) no-repeat left center;
+  background-size: 26px 26px;
+  position: absolute;
+  left: 15px;
+  top: 0;
+}
+
+.ztopr {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  font-size: 14px;
+}
+
+.wanshanBox {
+  padding: 0 15px;
+  background: #fff;
+  border-top: #dedede 1px solid;
+  border-bottom: #dedede 1px solid;
+}
+
+.zh {
+  color: #888;
+  position: relative;
+  font-size: 14px;
+  display: block;
+  width: 70px;
+  float: left;
+}
+
+.my-list {
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #ddd;
+}
+
+.my-list input {
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  float: left;
+  border: 0;
+}
+
+.order_btn {
+  margin: 50px auto 0 auto;
+  text-align: center;
+}
+
+.tanceng {
+  position: fixed;
+  top: 50%;
+  left: 25%;
+  width: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+
+.span-2 {
+  float: left;
+}
+
+.wanshanBox .my-list:last-child {
+  border-bottom: 0;
+}
+
+input,.picker{
+  color: #888;
+  font-size: 14px;
+}
+
+.foobtnrend {
+  display: block;
+  background: #1cc6a3;
+  color: #fff;
+  height: 44px;
+  line-height: 44px;
+  font-size: 17px;
+  border-radius: 5px;
+  margin: 15px;
+}

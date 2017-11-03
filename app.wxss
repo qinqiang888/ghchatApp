@@ -1,0 +1,194 @@
+/**app.wxss**/
+
+.container {
+  height: 100%;
+  box-sizing: border-box;
+  font-family: 'Microsoft YaHei';
+  font-size: 14px;
+  color: #525a66;
+}
+
+view {
+  display: block;
+}
+
+modal {
+  position: relative;
+}
+
+modal .center {
+  text-align: center;
+}
+
+/**{ margin:0; padding:0}*/
+
+em, i {
+  font-style: normal;
+}
+
+ul, li, dl {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, b {
+  font-weight: normal;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+img {
+  display: block;
+  border: 0;
+}
+
+a, a:visited {
+  color: #525a66;
+  text-decoration: none;
+}
+
+body {
+  font-size: 14px;
+  background: #f0f2f5;
+  color: #525a66;
+  font-family: Microsoft YaHei;
+}
+
+/*.clearfix{*zoom:1}*/
+
+.clearfix:before, .clearfix:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+input[type=submit], input[type=reset], input[type=button], button {
+  -webkit-appearance: none;
+}
+
+input {
+  outline: none;
+}
+
+input[type="text"] {
+  border: none;
+  outline: medium;
+}
+
+.botm-btn {
+  height: 74px;
+}
+
+.foobtnone {
+  display: block;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  background-color: #fff;
+  border-top: 1px solid #e8ebf0;
+  z-index: 2;
+}
+
+.foobtnrend {
+  display: block;
+  background: #1cc6a3;
+  color: #fff;
+  height: 44px;
+  line-height: 44px;
+  font-size: 17px;
+  border-radius: 5px;
+  margin: 15px;
+}
+
+
+.foobtngrey {
+  display: block;
+  background-color: #ebebf0;
+  color: #d2d2d2;
+  height: 44px;
+  line-height: 44px;
+  font-size: 17px;
+  border-radius: 5px;
+  margin: 15px;
+}
+
+
+
+.bg_grey {
+  background: #f7f8fa;
+}
+
+.bar_blank {
+  background-color: #f7f8fa;
+  height: 10px;
+}
+
+.picctxt a {
+  color: #1cc6a3;
+  text-decoration: underline;
+}
+
+.kefuTel {
+  display: block;
+  line-height: 16px;
+  padding: 0 0 10px 0;
+}
+
+.kefuTel a {
+  color: #1cc6a3;
+}
+
+.po_re {
+  position: relative;
+}
+
+/*bootom*/
+
+.bottom {
+  width: 100%;
+  height: 68px;
+  overflow: hidden;
+}
+
+.bottom-cont {
+  background: #fff;
+  padding: 15px 0;
+  border-top: 1px solid #e6e6e6;
+  height: 37px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 99%;
+  text-align: right;
+  padding-right: 1%;
+  z-index: 1000;
+}
+
+.bottom-cont view {
+  padding: 0 14px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 4px;
+  border: 1px solid #999;
+  display: inline-block;
+  margin-right: 10px;
+  background: #fff;
+  margin-left: -5px;
+}
+
+.bottom-cont view.cur {
+  border: 1px solid #1cc6a3;
+  background: #1cc6a3;
+  color: #fff;
+}

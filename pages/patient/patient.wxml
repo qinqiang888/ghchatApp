@@ -1,0 +1,54 @@
+<view class="bgw container">
+
+  <!--<form bindsubmit="formSubmit" bindreset="formReset">-->
+  <view class="mf_fix">
+    <view class="forms">
+      <view class="fline_block">
+        <view class="nameico"></view>
+        <view class="ipblock">
+          <input type="text" placeholder="姓名 " bindblur="bindblur" value='{{nameVal}}' />
+        </view>
+      </view>
+      <view class="fline_block">
+        <view class="shenfico"></view>
+        <view class="ipblock">
+          <input type="idcard" placeholder="身份证" bindblur="bindKeyInput" value='{{carVal}}' />
+        </view>
+      </view>
+      <view class="fline_block">
+        <view class="genderico"></view>
+        <view class="gender_block">
+          <view class="gender_input gray">性别</view>
+        </view>
+        <view class="gender_ch">
+          <radio-group class="radio-group" bindchange="radioChange">
+            <radio value="0">男</radio>
+            <radio value="1">女</radio>
+          </radio-group>
+        </view>
+      </view>
+      <view class="fline_block">
+
+        <!--患者关系弹出开始-->
+        <view class="guanxiico"></view>
+        <!--<text class="txtgrey"></text>-->
+          <picker class="section  ipblock" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <text class="txtgrey gray" wx:if="{{index==8}}">与患者关系</text>
+            <text class="txtgrey gray" wx:else>{{array[index]}}</text>
+          </picker>
+
+
+        <!--患者关系弹出结束-->
+        <view class="dizhimore"></view>
+      </view>
+    </view>
+  </view>
+  <view class="foobtnone">  
+    <button  formType="submit" class="foobtnrend" id="tapTest" data-hi="save111" bindtap="tapSave">保存档案</button>
+  </view>
+
+  <!--</form>-->
+</view>
+<modal class="modal" hidden="{{dialogBlen}}" no-cancel bindconfirm="modalChange" bindcancel="modalChange">
+  <view>{{dialogMsg}}</view>
+</modal>

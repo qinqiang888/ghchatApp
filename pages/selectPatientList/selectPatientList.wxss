@@ -1,0 +1,80 @@
+.bgw {
+  background: #fff;
+}
+
+.mf_fix {
+  padding: 0 0 75px 0;
+}
+
+.fline_block {
+  display: block;
+  height: 50px;
+  position: relative;
+  padding: 0 10px 0 15px;
+  border-bottom: 1px solid #e8ebf0;
+  line-height: 50px;
+}
+
+.addrno, .genderno {
+  background: url(http://m.yihu365.com/images/addrno.png) no-repeat center center;
+  background-size: 100%;
+}
+
+.addrcur, .gendercur {
+  background: url(http://m.yihu365.com/images/addrcur.png) no-repeat center center;
+  background-size: 100%;
+}
+
+.addrdel {
+  background: url(http://m.yihu365.com/images/addrdel.png) no-repeat center center;
+  background-size: 100%;
+}
+
+.addrcur, .addrno, .addrdel {
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -10px;
+}
+
+.foobtnone {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  background-color: #fff;
+}
+
+.addr_manage_lbox {
+  width: 60%;
+  float: left;
+}
+
+.addr_manage_lbox .onebtn_white {
+  margin-right: 0;
+}
+
+.onebtn_white {
+  background-color: #fff;
+  border: 1px solid #b1b7c2;
+  color: #525a66;
+  display: block;
+  height: 42px;
+  line-height: 42px;
+  border-radius: 5px;
+  margin: 15px;
+}
+
+.addr_manage_rbox {
+  width: 40%;
+  float: left;
+}
+
+.fline_block view {
+  display: inline;
+  margin-right: 10px;
+}

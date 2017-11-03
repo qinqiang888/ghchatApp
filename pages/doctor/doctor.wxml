@@ -1,0 +1,22 @@
+<!--doctor.wxml-->
+<view class="allhosp container">
+  <block wx:for='{{orderList}}'>
+    <view class="ys-li" bindtap="selectDoctor" data-id="{{item.doctorId}}" data-name="{{item.doctor}}">
+        <view class="ystx"><image src="{{item.headPic ? item.headPic : 'http://m.yihu365.com/images/xiaocxu/ystx.jpg'}}"></image></view>
+        <view class="ysjieshao">
+            <view class="h1"><text class="fl">{{item.doctor}}</text></view>
+            <view class="h2">{{item.hospitalName}}｜{{item.subDepartName}}</view>
+        </view>
+    </view>
+  </block>
+</view>
+
+<view class="loadingText" hidden="{{loadingBlen}}">
+    <view wx:if="{{loadingEnd}}"><image src="http://m.yihu365.com/images/xiaocxu/loading.gif" style="width:35px;height:35px;vertical-align:middle"></image>正在加载...</view>
+    <view wx:else>加载完成</view>
+</view>
+
+
+<modal class="modal" hidden="{{dialogBlen}}" no-cancel bindconfirm="modalChange" bindcancel="modalChange">
+    <view class="center">{{dialogMsg}}</view>
+</modal>

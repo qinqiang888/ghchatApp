@@ -1,0 +1,75 @@
+<!--index.wxml-->
+<scroll-view id="body"  bindscrolltoupper="upper" bindscrolltolower="lower"scroll-y="true"scroll-into-view="red" scroll-top="100" bindscroll="getTop">
+<view wx:if="{{hidden==false}}" class="grayzhezhao" bindtap="click_zhezhao"></view>
+<view wx:elif="{{hidden==true}}" class=""></view>
+<view  bindtap="search" class="sytop" >
+<image src="http://m.yihu365.com/images/xiaocxu/sstiaozhuan.png"></image>
+</view>
+<view class="yiyuanbox">
+    <view class="tive" style="top:{{top}}; position:{{position}}">
+        <view class="yytop">
+            <view wx:if="{{hidden==false&&click=='city'}}"class="two shuxian" bindtap="getGhHospitalType" id="1">
+                <text class="cur">{{selectCity}}</text>
+            </view>
+                 <view wx:else class="two shuxian" bindtap="getGhHospitalType" id="1">
+                <text class="">{{selectCity}}</text>
+            </view>
+            <view wx:if="{{hidden==false&&click=='hospital'}}" class="two" bindtap="getGhHospitalType" id="2">
+                <text class="cur">{{selectHospital}}</text>
+            </view>
+              <view wx:else class="two" bindtap="getGhHospitalType" id="2">
+                <text class="">{{selectHospital}}</text>
+            </view>
+        </view>
+        <scroll-view class="lute" scroll-y="true" style="height:180px" bindscroll="bindscroll" hidden="{{hidden}}">
+        <block wx:if="{{click=='city'}}">
+            <view class="xlbox" hover-class="downgrey" wx:for="{{city_hospital.hospitalCity}}" >
+               <!-- <view class="dq"><text class="cur">北京<em class="xzg"></em></text></view> -->
+               <view wx:if="{{selectCity==item.vale}}"class="dq" bindtap="clickCity" data-val="{{item.vale}}" data-code="{{item.code}}" data-type="{{item.type}}"><text class="cur">{{item.vale}}<icon class="xzg"></icon></text></view>
+    <view wx:else class="dq"  bindtap="clickCity" data-val="{{item.vale}}" data-code="{{item.code}}" data-type="{{item.type}}"><text class="">{{item.vale}}</text></view>
+            </view>
+          </block>
+          <block wx:else>
+            <view class="xlbox" hover-class="downgrey" wx:for="{{city_hospital.hospitalPageType}}">
+                <!-- <view class="dq" ><text class="cur">儿童医院<em class="xzg"></em></text></view> -->
+              <view wx:if="{{selectHospital==item.vale}}" class="dq" bindtap="clickHospital" data-val="{{item.vale}}" data-code="{{item.code}}"><text class="cur">{{item.vale}}<em class="xzg"></em></text></view>
+              <view wx:else class="dq"  bindtap="clickHospital" data-val="{{item.vale}}" data-code="{{item.code}}"><text class="">{{item.vale}}</text></view>
+            </view>
+            </block>
+        </scroll-view>
+    </view>
+    <view class="allhosp" wx:for="{{hospitalList}}">
+         <!-- <view class="allhosp-li">
+            <view class="left-img"><image class="img" src="/images/hospimg.jpg"></image></view>
+            <view class="right-cont">
+                <view class="h1"><text class="fl">北京儿童医院</text><text class="fr">2000位医生</text></view>
+                <view class="h2">北京｜三甲</view>
+                <view class="h3">简介：妇科内分泌性疾病和各种不孕症，如输卵管性、内分泌性、免疫性和子宫内膜</view>
+            </view>
+        </view>  -->
+        <view class="allhosp-li" bindtap="depart" data-hospitalName="{{item.hospitalName}}" data-hospitalId="{{item.hospitalId}}" data-code="{{item.cityCode}}" data-pic="{{item.pic?item.pic:morenpic}}">
+            <view class="left-img"><image class="img" src="{{item.pic?item.pic:morenpic}}"></image></view>
+            <view class="right-cont">
+                <view class="h1"><view class="fl">{{item.hospitalName}}</view><view class="fr">{{item.hospitalNum}}位医生</view></view>
+                <view class="h2">{{item.city}}｜{{item.grade}}</view>
+                <view class="h3">简介：{{item.introduction?item.introduction:''}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="foot">
+    <view class='footer'>
+        <view class="ul">
+            <view class="cur lifoot">
+                <view class="p yuyue">预约挂号</view>
+            </view>
+            <view class="lifoot">
+                <navigator  url="{{userId ? (jumpUrl.home) : '/pages/login/login'}}"><view class="p wode">我的</view></navigator>
+            </view>
+
+        </view>
+    </view>
+</view>
+  <loading wx:if="{{load=='加载中'}}"  hidden="{{loading}}">{{load}}</loading>
+<view  wx:else   style="text-align:center;height:100px;line-height:50px">{{load}}</view>
+</scroll-view>

@@ -1,0 +1,166 @@
+page {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  background: #f0f2f5;
+  color: #525a66;
+  font-family: Microsoft YaHei;
+}
+.order-nav {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background: #fff;
+  color: #222;
+}
+
+.order-nav .li {
+  width: 25%;
+  float: left;
+  text-align: center;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.order-nav .cur {
+  color: #1cc6a3;
+  border-bottom: 2px solid #1cc6a3;
+}
+
+.order-list {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  margin-top: 10px;
+  color: #222;
+}
+
+.order-list .top {
+  height: 40px;
+  line-height: 40px;
+  margin-left: 15px;
+  border-bottom: 1px solid #e6e6e6;
+  font-size: 15px;
+}
+
+.haolei {
+  font-size: 13px;
+}
+
+.zhuangtai {
+  float: right;
+  color: #fc8224;
+  padding-right: 15px;
+}
+
+.zhuangtai.fontgrey {
+  color: #999;
+}
+
+.order-cont {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 10px 0 10px 15px;
+}
+
+.order-cont .li {
+  width: 100%;
+  height: 22px;
+  line-height: 22px;
+}
+
+.icon-yy {
+  display: inline-block;
+  width: 15px;
+  height: 22px;
+  background: url(http://m.yihu365.com/images/xiaocxu/order_yiyuan.png) no-repeat left center/15px;
+  float: left;
+  margin-right: 5px;
+}
+
+.icon-time {
+  display: inline-block;
+  width: 15px;
+  height: 22px;
+  background: url(http://m.yihu365.com/images/xiaocxu/order_time.png) no-repeat left center/15px;
+  float: left;
+  margin-right: 5px;
+}
+
+.icon-feiy {
+  display: inline-block;
+  width: 15px;
+  height: 22px;
+  background: url(http://m.yihu365.com/images/xiaocxu/order_feiyong.png) no-repeat left center/15px;
+  float: left;
+  margin-right: 5px;
+}
+
+.order-bot {
+  padding: 10px 15px 10px 0;
+  text-align: right;
+}
+
+.order-bot a {
+  display: inline-block;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 10px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  color: #666;
+  min-width: 58px;
+  text-align: center;
+}
+
+.order-bot a.cur {
+  background: #1cc6a3;
+  border: 1px solid #1cc6a3;
+  color: #fff;
+}
+
+
+.cancleRadio {
+  margin-top: 10px;
+}
+
+.cancleRadio view {
+  margin: 16px 0;
+}
+
+.cancleRadio radio {
+  margin-top: -4px;
+  vertical-align: top;
+}
+
+.otherCon {
+  height: 20px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px #aaa solid;
+  background: #fff;
+}
+
+.fixedModal {
+  height: 25px;
+  padding: 10px 0;
+  line-height: 25px;
+  width: 76%;
+  position: fixed;
+  left: 12%;
+  background: rgba(0, 0, 0, 0.5);
+  top: 40%;
+  border-radius: 5px;
+  z-index: 100000;
+  color: #fff;
+  text-align: center;
+}
+
+.modalFalse view {
+  text-align: center;
+}
+
+.loadingText {
+  font-size: 13px;
+  text-align: center;
+  padding:10px 0 15px;
+  color:#333;
+}

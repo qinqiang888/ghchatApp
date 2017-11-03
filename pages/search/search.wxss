@@ -1,0 +1,422 @@
+page {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  background: #f0f2f5;
+  color: #525a66;
+  font-family: Microsoft YaHei;
+}
+
+.ghdz_search {
+  padding: 10px 12px;
+  height: 30px;
+  border-bottom: 1px solid #e8ebf0;
+  background: #fff;
+}
+
+.right_search_b {
+  height: 30px;
+  margin-right: 43px;
+}
+
+.right_search_block {
+  height: 30px;
+  background: #f1f2f6 url(http://m.yihu365.com/images/xiaocxu/wxsousuo.png) no-repeat 8px center/14px 14px;
+  padding-left: 25px;
+  border-radius: 50px;
+  position: relative;
+}
+
+.right_search_block input {
+  float: left;
+  height: 30px;
+  width: 90%;
+  background: #f1f2f6;
+  font-size: 13px;
+  padding-left: 5px;
+  color: #222;
+}
+
+.search_qdbtn {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  font-size: 16px;
+  color: #222;
+  line-height: 30px;
+}
+
+.cyl_yiyuan {
+  padding-left: 15px;
+  background: #fff;
+}
+
+.cyl_yiyuan .li {
+  height: 55px;
+  line-height: 55px;
+  border-bottom: 1px solid #e6e6e6;
+  font-size: 16px;
+  color: #222;
+}
+
+.qingkong {
+  height: 55px;
+  line-height: 55px;
+  color: #222;
+  font-size: 14px;
+  text-align: center;
+  display: block;
+  margin-right: 15px;
+}
+
+.ghdz_search {
+  padding: 10px 12px;
+  height: 30px;
+  border-bottom: 1px solid #e8ebf0;
+  background: #fff;
+}
+
+.right_search_b {
+  height: 30px;
+  margin-right: 43px;
+}
+
+.right_search_block {
+  height: 30px;
+  background: #f1f2f6 url(http://m.yihu365.com/images/xiaocxu/images/wxsousuo.png) no-repeat 8px center/14px 14px;
+  padding-left: 25px;
+  border-radius: 50px;
+  position: relative;
+}
+
+.right_search_block input {
+  float: left;
+  height: 30px;
+  width: 90%;
+  background: #f1f2f6;
+  font-size: 13px;
+  padding-left: 5px;
+  color: #222;
+}
+
+.search_qdbtn {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  font-size: 16px;
+  color: #222;
+  line-height: 30px;
+}
+
+.nonrbox {
+  margin-top: 60px;
+}
+
+.nonrimg {
+  width: 100px;
+  margin: 0 auto;
+}
+
+.nonrimg .img {
+  width: 100px;
+  height: 100px;
+}
+
+.nonrbox .text {
+  font-size: 16px;
+  color: #999;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+image {
+  display: block;
+  border: 0;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:before, .clearfix:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+input[type=submit], input[type=reset], input[type=button], button {
+  -webkit-appearance: none;
+}
+
+input {
+  outline: none;
+}
+
+input[type="text"] {
+  border: none;
+  outline: medium;
+}
+
+.botm-btn {
+  height: 74px;
+}
+
+.foobtnone {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  background-color: #fff;
+  border-top: 1px solid #e8ebf0;
+  z-index: 2;
+}
+
+a.foobtnrend {
+  display: block;
+  background: #1cc6a3;
+  color: #fff;
+  height: 44px;
+  line-height: 44px;
+  font-size: 17px;
+  border-radius: 5px;
+  margin: 15px;
+}
+
+a.foobtnrend:active {
+  background: #0091cb;
+}
+
+a.foobtngrey {
+  display: block;
+  background-color: #ebebf0;
+  color: #d2d2d2;
+  height: 44px;
+  line-height: 44px;
+  font-size: 17px;
+  border-radius: 5px;
+  margin: 15px;
+}
+
+a.foobtngrey:active {
+  background: #ebebf0;
+}
+
+.bg_grey {
+  background: #f7f8fa;
+}
+
+.bar_blank {
+  background-color: #f7f8fa;
+  height: 10px;
+}
+
+.picctxt a {
+  color: #1cc6a3;
+  text-decoration: underline;
+}
+
+.kefuTel {
+  display: block;
+  line-height: 16px;
+  padding: 0 0 10px 0;
+}
+
+.kefuTel a {
+  color: #1cc6a3;
+}
+
+.po_re {
+  position: relative;
+}
+
+/*bootom*/
+
+.bottom {
+  width: 100%;
+  height: 68px;
+  overflow: hidden;
+}
+
+.bottom-cont {
+  background: #fff;
+  padding: 15px 0;
+  border-top: 1px solid #e6e6e6;
+  height: 37px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 99%;
+  text-align: right;
+  padding-right: 1%;
+}
+
+.bottom-cont a {
+  padding: 0 14px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 4px;
+  border: 1px solid #999;
+  display: inline-block;
+  margin-right: 10px;
+  background: #fff;
+  margin-left: -5px;
+}
+
+.bottom-cont a.cur {
+  border: 1px solid #1cc6a3;
+  background: #1cc6a3;
+  color: #fff;
+}
+
+/*全部医院、全部医生*/
+
+.allhosp {
+  background: #fff;
+  padding: 0 0 0 15px;
+}
+
+.allhosp-li {
+  position: relative;
+  padding-right: 15px;
+  border-bottom: 1px solid #e6e6e6;
+  height: 83px;
+  padding: 15px 15px 15px 0;
+}
+
+.allhosp-li:last-child {
+  /* border: 0; */
+}
+
+.left-img {
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 83px;
+  height: 83px;
+}
+
+.left-img .img {
+  width: 83px;
+  height: 83px;
+  border-radius: 3px;
+}
+
+.right-cont {
+  margin-left: 94px;
+}
+
+.right-cont .h1{ display:block; height:20px; line-height:20px;}
+.right-cont .h1 .f1{ color:#222; font-size:16px;}
+.right-cont .h1 .fr{ color:#999; font-size:13px;float: right}
+.right-cont .h2{ color:#999; font-size:13px; height:28px; line-height:28px;}
+.right-cont .h3{ color:#999; font-size:13px; height:36px; 
+line-height:18px;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;
+overflow:hidden;
+display:-webkit-box;}
+
+.left-img2 {
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 60px;
+  height: 60px;
+}
+
+.left-img2 .img {
+  width: 60px;
+  height: 60px;
+  border-radius: 3px;
+}
+
+.right-cont .h1{
+  font-size: 13px;
+  color: #999;
+  margin-left: 3px;
+}
+
+.marg {
+  margin-left: 75px;
+}
+
+/*搜索*/
+
+.ghdz_search {
+  padding: 10px 12px;
+  height: 30px;
+  border-bottom: 1px solid #e8ebf0;
+  background: #fff;
+}
+
+.right_search_b {
+  height: 30px;
+  margin-right: 43px;
+}
+
+.right_search_block {
+  height: 30px;
+  background: #f1f2f6 url(http://m.yihu365.com/images/xiaocxu/images/wxsousuo.png) no-repeat 8px center/14px 14px;
+  padding-left: 25px;
+  border-radius: 50px;
+  position: relative;
+}
+
+.right_search_block input {
+  float: left;
+  height: 30px;
+  width: 90%;
+  background: #f1f2f6;
+  font-size: 13px;
+  padding-left: 5px;
+  color: #222;
+}
+
+.search_qdbtn {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  font-size: 16px;
+  color: #222;
+  line-height: 30px;
+}
+
+.jgbox {
+  margin-top: 10px;
+}
+
+.jgtop {
+  background: #fff;
+  height: 45px;
+  border-bottom: 1px solid #e6e6e6;
+  line-height: 45px;
+  color: #222;
+  font-size: 16px;
+  padding: 0 15px;
+}
+
+.jgtop_lt {
+  float: left;
+}
+
+.jgtop_rt {
+  font-size: 13px;
+  color: #999;
+  float: right;
+  background: url("http://m.yihu365.com/images/xiaocxu/rightjt.png")no-repeat right;
+  background-size: 7px 12px;
+  padding-right: 17px;
+}
